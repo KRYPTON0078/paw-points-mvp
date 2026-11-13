@@ -25,9 +25,9 @@
     "Recompensas"
   ],
   "You": [
-    "我的",
-    "我的",
-    "Perfil"
+    "你",
+    "你",
+    "Você"
   ],
   "Done. A little closer, together.": [
     "操作成功，关系更近一步。",
@@ -3398,5 +3398,435 @@
     "商品暂不可购买",
     "商品暫不可購買",
     "Produto indisponível"
+  ],
+  "Virtual companion": [
+    "虚拟陪伴",
+    "虛擬陪伴",
+    "Companhia virtual"
+  ],
+  "A little company, wherever you are.": [
+    "无论在哪里，都有一点陪伴。",
+    "無論在哪裡，都有一點陪伴。",
+    "Um pouco de companhia, onde quer que esteja."
+  ],
+  "Fan leaderboard": [
+    "粉丝贡献榜",
+    "粉絲貢獻榜",
+    "Classificação de fãs"
+  ],
+  "Cat leaderboard": [
+    "猫咪人气榜",
+    "貓咪人氣榜",
+    "Classificação de gatos"
+  ],
+  "Zoom in": [
+    "放大",
+    "放大",
+    "Ampliar"
+  ],
+  "Zoom out": [
+    "缩小",
+    "縮小",
+    "Reduzir"
+  ],
+  "Reset map": [
+    "重置地图",
+    "重設地圖",
+    "Repor mapa"
+  ],
+  "Macau peninsula": [
+    "澳门半岛",
+    "澳門半島",
+    "Península de Macau"
+  ],
+  "Taipa": [
+    "氹仔",
+    "氹仔",
+    "Taipa"
+  ],
+  "Coloane": [
+    "路环",
+    "路環",
+    "Coloane"
+  ],
+  "Fictional Macau neighbourhood · drag to explore · not for navigation": [
+    "澳门虚构街区 · 可拖动探索 · 不可用于导航",
+    "澳門虛構街區 · 可拖動探索 · 不可用於導航",
+    "Bairro fictício de Macau · arraste para explorar · não usar para navegação"
+  ],
+  "Illustrated concept interior": [
+    "概念室内插画",
+    "概念室內插畫",
+    "Ilustração de interior conceptual"
+  ],
+  "Fictional café": [
+    "虚构猫咖",
+    "虛構貓咖",
+    "Café fictício"
+  ],
+  "Taipa · Fictional café": [
+    "氹仔 · 虚构猫咖",
+    "氹仔 · 虛構貓咖",
+    "Taipa · Café fictício"
+  ],
+  "Taipa village area, Macau · Approximate concept location only": [
+    "澳门氹仔旧城区附近 · 仅为概念大致位置",
+    "澳門氹仔舊城區附近 · 僅為概念大致位置",
+    "Vila da Taipa, Macau · Localização conceptual aproximada"
+  ],
+  "A small creative studio where cat portraits and handmade keepsakes meet.": [
+    "把猫咪肖像和手作纪念品放在一起的小小创作空间。",
+    "把貓咪肖像和手作紀念品放在一起的小小創作空間。",
+    "Um pequeno estúdio criativo que reúne retratos de gatos e lembranças artesanais."
+  ],
+  "Coloane · Fictional café": [
+    "路环 · 虚构猫咖",
+    "路環 · 虛構貓咖",
+    "Coloane · Café fictício"
+  ],
+  "Coloane village area, Macau · Approximate concept location only": [
+    "澳门路环市区附近 · 仅为概念大致位置",
+    "澳門路環市區附近 · 僅為概念大致位置",
+    "Vila de Coloane, Macau · Localização conceptual aproximada"
+  ],
+  "A coastal-inspired retreat with soft colours and room to daydream.": [
+    "以海岸为灵感，柔和色彩里留一点发呆的空间。",
+    "以海岸為靈感，柔和色彩裡留一點發呆的空間。",
+    "Um refúgio inspirado na costa, com cores suaves e espaço para sonhar."
+  ],
+  "Books, slow coffee and sunny window seats.": [
+    "书本、慢咖啡和洒满阳光的窗边座位。",
+    "書本、慢咖啡和灑滿陽光的窗邊座位。",
+    "Livros, café sem pressa e lugares soalheiros à janela."
+  ],
+  "Leafy play spaces and a gentle afternoon rhythm.": [
+    "绿意玩耍空间与慢悠悠的午后节奏。",
+    "綠意玩耍空間與慢悠悠的午後節奏。",
+    "Espaços verdes para brincar e tardes tranquilas."
+  ],
+  "A quiet lounge for unhurried evenings.": [
+    "适合慢慢度过夜晚的安静休息室。",
+    "適合慢慢度過夜晚的安靜休息室。",
+    "Um salão tranquilo para noites sem pressa."
+  ],
+  "Cat-inspired art, postcards and creative workshops.": [
+    "猫咪主题艺术、明信片与创作工作坊。",
+    "貓咪主題藝術、明信片與創作工作坊。",
+    "Arte felina, postais e oficinas criativas."
+  ],
+  "A calm seaside concept and little explorer stories.": [
+    "安静的海边概念空间和小探险家的故事。",
+    "安靜的海邊概念空間和小探險家的故事。",
+    "Um conceito à beira-mar e histórias de pequenos exploradores."
+  ],
+  "MVP RULES · NO PAID CREDITS": [
+    "演示规则 · 无付费积分",
+    "演示規則 · 無付費積分",
+    "REGRAS DO MVP · SEM CRÉDITOS PAGOS"
+  ],
+  "Your points, explained.": [
+    "把积分说清楚。",
+    "把積分說清楚。",
+    "Os seus pontos, explicados."
+  ],
+  "CAT 101 · THE PEOPLE BEHIND THE PAWS": [
+    "CAT 101 · 猫咪背后的支持者",
+    "CAT 101 · 貓咪背後的支持者",
+    "CAT 101 · QUEM APOIA AS PATINHAS"
+  ],
+  "Little votes. Big-hearted fans.": [
+    "小小一票，大大支持。",
+    "小小一票，大大支持。",
+    "Pequenos votos. Fãs de coração grande."
+  ],
+  "Every accepted free vote adds one contribution point. A little thank-you for showing up.": [
+    "每次成功的免费投票增加 1 点贡献值，记录你的每一份支持。",
+    "每次成功的免費投票增加 1 點貢獻值，記錄你的每一份支持。",
+    "Cada voto gratuito aceite vale um ponto de contribuição. Um agradecimento pelo seu apoio."
+  ],
+  "Local demo leaderboard. Pseudonymous sample fans have fictional scores; your score comes only from votes accepted in this browser. No global rankings or historical movement.": [
+    "本地演示榜单。示例粉丝使用化名和虚构分数；你的分数只来自此浏览器内成功的投票。不代表全球排名，也不显示历史升降。",
+    "本地演示榜單。示例粉絲使用化名和虛構分數；你的分數只來自此瀏覽器內成功的投票。不代表全球排名，也不顯示歷史升降。",
+    "Classificação local de demonstração. Os fãs de exemplo usam pseudónimos e pontuações fictícias; a sua pontuação resulta apenas dos votos aceites neste navegador. Sem classificação global nem variação histórica."
+  ],
+  "contribution points": [
+    "贡献值",
+    "貢獻值",
+    "pontos de contribuição"
+  ],
+  "Sample fan": [
+    "示例粉丝",
+    "示例粉絲",
+    "Fã de exemplo"
+  ],
+  "Local fan": [
+    "本地粉丝",
+    "本地粉絲",
+    "Fã local"
+  ],
+  "The fan community.": [
+    "一起支持的朋友们。",
+    "一起支持的朋友們。",
+    "A comunidade de fãs."
+  ],
+  "Supporting": [
+    "支持",
+    "支持",
+    "A apoiar"
+  ],
+  "New neighbour": [
+    "新朋友",
+    "新朋友",
+    "Novo vizinho"
+  ],
+  "YOUR VIRTUAL COMPANION": [
+    "你的虚拟伙伴",
+    "你的虛擬夥伴",
+    "O SEU COMPANHEIRO VIRTUAL"
+  ],
+  "Reactions only · no PP or XP": [
+    "仅互动反馈 · 不获得 PP 或 XP",
+    "僅互動回饋 · 不獲得 PP 或 XP",
+    "Apenas reações · sem PP nem XP"
+  ],
+  "Turn sound off": [
+    "关闭声音",
+    "關閉聲音",
+    "Desligar som"
+  ],
+  "Turn sound on": [
+    "开启声音",
+    "開啟聲音",
+    "Ligar som"
+  ],
+  "Pet gently": [
+    "轻轻摸摸",
+    "輕輕摸摸",
+    "Fazer uma festinha"
+  ],
+  "Photo-based 2D companion · fictional cat": [
+    "照片式 2D 陪伴 · 虚构猫咪",
+    "照片式 2D 陪伴 · 虛構貓咪",
+    "Companhia 2D com fotografia · gato fictício"
+  ],
+  "A little message": [
+    "一句小小的问候",
+    "一句小小的問候",
+    "Uma pequena mensagem"
+  ],
+  "Say something kind…": [
+    "说句温柔的话……",
+    "說句溫柔的話……",
+    "Diga algo carinhoso…"
+  ],
+  "Say hello": [
+    "打个招呼",
+    "打個招呼",
+    "Dizer olá"
+  ],
+  "Prewritten reactions, not AI understanding. Messages are not saved.": [
+    "使用预设反馈，不具备 AI 理解能力。不会保存你输入的话。",
+    "使用預設回饋，不具備 AI 理解能力。不會儲存你輸入的話。",
+    "Reações predefinidas, sem compreensão por IA. As mensagens não são guardadas."
+  ],
+  "CHOOSE A LITTLE WORLD": [
+    "选择一个小世界",
+    "選擇一個小世界",
+    "ESCOLHA UM PEQUENO MUNDO"
+  ],
+  "A change of scenery.": [
+    "换个地方，继续相伴。",
+    "換個地方，繼續相伴。",
+    "Uma mudança de cenário."
+  ],
+  "LITTLE SHARED MOMENTS": [
+    "一起的小小片刻",
+    "一起的小小片刻",
+    "PEQUENOS MOMENTOS EM CONJUNTO"
+  ],
+  "Your visit journal.": [
+    "你的陪伴手记。",
+    "你的陪伴手記。",
+    "O seu diário de visitas."
+  ],
+  "Tap the portrait to begin a little moment.": [
+    "轻触照片，开启一段小小陪伴。",
+    "輕觸照片，開啟一段小小陪伴。",
+    "Toque no retrato para começar um pequeno momento."
+  ],
+  "Virtual companionship is not adoption or ownership. These playful reactions do not change PP, Bond XP or voting rights. Real care stays with café staff.": [
+    "虚拟陪伴不代表领养或所有权。这些趣味互动不会改变 PP、亲密度或投票权。真实照护由猫咖工作人员负责。",
+    "虛擬陪伴不代表領養或所有權。這些趣味互動不會改變 PP、親密度或投票權。真實照護由貓咖工作人員負責。",
+    "A companhia virtual não implica adoção nem posse. Estas reações não alteram PP, Bond XP ou direitos de voto. Os cuidados reais cabem à equipa do café."
+  ],
+  "Featured cats may be guest characters from another concept café.": [
+    "推荐猫咪可能是来自其他概念猫咖的客串角色。",
+    "推薦貓咪可能是來自其他概念貓咖的客串角色。",
+    "Os gatos em destaque podem ser personagens convidadas de outro café conceptual."
+  ],
+  "LITTLE KEEPSAKES": [
+    "小小纪念",
+    "小小紀念",
+    "PEQUENAS LEMBRANÇAS"
+  ],
+  "From this little world.": [
+    "把这个小世界带回家。",
+    "把這個小世界帶回家。",
+    "Deste pequeno mundo."
+  ],
+  "Original concept mockup": [
+    "原创概念样图",
+    "原創概念樣圖",
+    "Maqueta conceptual original"
+  ],
+  "A LITTLE VOTE. A LITTLE LOVE.": [
+    "一票，也是一份喜欢。",
+    "一票，也是一份喜歡。",
+    "UM PEQUENO VOTO. UM POUCO DE CARINHO."
+  ],
+  "Your vote is counted!": [
+    "投票成功！",
+    "投票成功！",
+    "O seu voto foi contado!"
+  ],
+  "votes left today": [
+    "票今日剩余",
+    "票今日剩餘",
+    "votos restantes hoje"
+  ],
+  "The rankings have been updated.": [
+    "排名已更新。",
+    "排名已更新。",
+    "A classificação foi atualizada."
+  ],
+  "Cozy café": [
+    "温暖猫咖",
+    "溫暖貓咖",
+    "Café acolhedor"
+  ],
+  "Sunny garden": [
+    "晴日花园",
+    "晴日花園",
+    "Jardim soalheiro"
+  ],
+  "Cat lounge": [
+    "猫咪休息室",
+    "貓咪休息室",
+    "Salão dos gatos"
+  ],
+  "Nighttime window": [
+    "夜色窗边",
+    "夜色窗邊",
+    "Janela à noite"
+  ],
+  "A warm window seat, just for a moment.": [
+    "在温暖的窗边，待一小会儿。",
+    "在溫暖的窗邊，待一小會兒。",
+    "Um lugar acolhedor à janela, só por um momento."
+  ],
+  "A little sunlight. A little daydream.": [
+    "一点阳光，一点小小的白日梦。",
+    "一點陽光，一點小小的白日夢。",
+    "Um pouco de sol. Um pequeno devaneio."
+  ],
+  "Soft cushions and absolutely no plans.": [
+    "软软的靠垫，什么也不用安排。",
+    "軟軟的靠墊，什麼也不用安排。",
+    "Almofadas macias e nenhum plano."
+  ],
+  "The city sleeps. Your little friend stays close.": [
+    "城市睡了，小伙伴还在身边。",
+    "城市睡了，小夥伴還在身邊。",
+    "A cidade dorme. O seu pequeno amigo fica por perto."
+  ],
+  "Play together": [
+    "一起逗玩",
+    "一起逗玩",
+    "Brincar juntos"
+  ],
+  "Virtual treat": [
+    "虚拟零食",
+    "虛擬零食",
+    "Petisco virtual"
+  ],
+  "A little head tilt. A softer afternoon.": [
+    "轻轻歪一下头，午后也变柔软了。",
+    "輕輕歪一下頭，午後也變柔軟了。",
+    "Uma pequena inclinação da cabeça. Uma tarde mais suave."
+  ],
+  "Those curious eyes follow the little toy.": [
+    "好奇的眼睛跟着小玩具转呀转。",
+    "好奇的眼睛跟著小玩具轉呀轉。",
+    "Os olhos curiosos seguem o pequeno brinquedo."
+  ],
+  "A tiny happy wiggle. Pretend treats only!": [
+    "开心地扭一扭。只是虚拟零食哦！",
+    "開心地扭一扭。只是虛擬零食喔！",
+    "Uma pequena dança feliz. São apenas petiscos virtuais!"
+  ],
+  "Your little friend settles in beside you.": [
+    "小伙伴在你身边安心地待下来了。",
+    "小夥伴在你身邊安心地待下來了。",
+    "O seu pequeno amigo acomoda-se ao seu lado."
+  ],
+  "Earn PP": [
+    "如何获得 PP",
+    "如何獲得 PP",
+    "Ganhar PP"
+  ],
+  "First follow: 20 PP once. Demo check-in: 5 PP per day. Demo staff interaction: 10 PP per cat per day. Verified referral simulation: 30 PP once.": [
+    "首次关注一次性获得 20 PP；演示签到每天 5 PP；每只猫每天一次演示员工互动获得 10 PP；模拟验证推荐一次性获得 30 PP。",
+    "首次關注一次性獲得 20 PP；演示簽到每天 5 PP；每隻貓每天一次演示員工互動獲得 10 PP；模擬驗證推薦一次性獲得 30 PP。",
+    "Primeiro seguimento: 20 PP uma vez. Check-in de demonstração: 5 PP por dia. Interação com equipa: 10 PP por gato por dia. Referência verificada simulada: 30 PP uma vez."
+  ],
+  "Demo purchases": [
+    "演示消费",
+    "演示消費",
+    "Compras de demonstração"
+  ],
+  "Simulated merchandise, approved birthday events and care support earn 1 PP per MOP. Booking requests earn no PP. Care support is limited to 3 per day.": [
+    "模拟商品消费、已模拟批准的生日活动与照护支持，每 1 MOP 获得 1 PP。预约申请不获得 PP。照护支持每天最多 3 次。",
+    "模擬商品消費、已模擬批准的生日活動與照護支持，每 1 MOP 獲得 1 PP。預約申請不獲得 PP。照護支持每天最多 3 次。",
+    "Mercadorias simuladas, aniversários aprovados e apoio a cuidados dão 1 PP por MOP. Os pedidos de reserva não dão PP. O apoio a cuidados tem um limite de 3 por dia."
+  ],
+  "Use PP": [
+    "如何使用 PP",
+    "如何使用 PP",
+    "Usar PP"
+  ],
+  "Redeem the listed demo vouchers, subject to each cat’s Bond level and your balance. Each reward can be redeemed once per cat. No real fulfillment is included.": [
+    "按各只猫的亲密等级及积分余额兑换演示券。每只猫的每种奖励仅可兑换一次，不包含真实履约。",
+    "按各隻貓的親密等級及積分餘額兌換演示券。每隻貓的每種獎勵僅可兌換一次，不包含真實履約。",
+    "Troque pelos vales de demonstração conforme o nível de vínculo e saldo. Cada recompensa pode ser trocada uma vez por gato. Sem entrega real."
+  ],
+  "Validity and storage": [
+    "有效期与保存",
+    "有效期與儲存",
+    "Validade e armazenamento"
+  ],
+  "No expiry is implemented. PP and progress are stored in this browser only. Clearing browser data or resetting the demo removes them. They do not sync between devices.": [
+    "当前未设置过期规则。PP 与进度仅保存在当前浏览器；清除浏览器数据或重置演示会将其移除，不支持跨设备同步。",
+    "目前未設定過期規則。PP 與進度僅儲存在目前瀏覽器；清除瀏覽器資料或重設演示會將其移除，不支援跨裝置同步。",
+    "Não há expiração implementada. PP e progresso ficam apenas neste navegador. Limpar dados ou repor a demonstração elimina-os. Sem sincronização entre dispositivos."
+  ],
+  "Refunds and transfers": [
+    "退款与转让",
+    "退款與轉讓",
+    "Reembolsos e transferências"
+  ],
+  "PP cannot be purchased, refunded for cash or transferred. No real money is collected. A refund workflow is not implemented.": [
+    "PP 不可购买、提现退款或转让。不收取真实款项，当前未实现退款流程。",
+    "PP 不可購買、提現退款或轉讓。不收取真實款項，目前未實現退款流程。",
+    "Os PP não podem ser comprados, convertidos em dinheiro ou transferidos. Não há pagamentos reais nem fluxo de reembolso implementado."
+  ],
+  "Three separate systems": [
+    "三套独立规则",
+    "三套獨立規則",
+    "Três sistemas distintos"
+  ],
+  "PP pays for demo rewards. Bond XP tracks each cat’s relationship. Free CAT 101 votes are limited to 3 per Macau day. One accepted vote adds 1 fan contribution point. Virtual pet reactions award nothing.": [
+    "PP 用于演示奖励；Bond XP 记录与每只猫的亲密度。CAT 101 免费投票按澳门日期每天共 3 票，每次成功投票增加 1 点粉丝贡献值。虚拟互动不发放任何奖励。",
+    "PP 用於演示獎勵；Bond XP 記錄與每隻貓的親密度。CAT 101 免費投票按澳門日期每天共 3 票，每次成功投票增加 1 點粉絲貢獻值。虛擬互動不發放任何獎勵。",
+    "PP serve para recompensas de demonstração. Bond XP acompanha a relação com cada gato. Há 3 votos gratuitos por dia de Macau. Cada voto aceite dá 1 ponto de contribuição. As reações virtuais não dão recompensas."
   ]
 }

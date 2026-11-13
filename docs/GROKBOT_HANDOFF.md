@@ -1,6 +1,43 @@
-# Paw Points 2.1｜GrokBot 与团队交接
+# Paw Points 2.2｜GrokBot 与团队交接
 
 来源：Codex｜更新：2026-11-13。范围：可演示的消费者网站；未建立真实经营后台或完整 Agent 系统。
+
+
+## Round 3 当前交付（2026-11-13）
+
+本节优先于下方保留的 2.1 历史说明。分支 `feature/paw-points-round-3`，基于 `main@89f366e`；本轮只推功能分支，不自动合并或部署 Production。生产仍是 https://paw-points-mvp.vercel.app 。预览部署结果见本轮交付消息。验收见 [QA_2_2.md](QA_2_2.md)。
+
+### Virtual Pet
+
+- 新增 `/virtual-pet/{catId}/`，覆盖 mochi、luna、milo、coco、nori；从 Cat ID、会员页、陪伴页、猫咖发现进入。
+- `VirtualPet.tsx` 复用同一猫咪照片、ID 和 Bond XP，呈现照片式 2D 互动；不是 3D、真实直播或生成式 AI。
+- `round3.ts` 定义四个场景（cafe / garden / bedroom / night）和四个动作（pet / play / treat / talk）；`public/scenes/` 为原创场景 SVG。声音默认关闭，用户打开后播放轻提示音。
+- `engine.ts` 新增 pet / pet-scene 命令，校验猫、场景及动作；只存 `petScenes` 和最多 60 条 `petHistory`。两字段可选，兼容原 `paw-points-v2` version 2 数据。消息文本不保存，短问候只触发预设反馈。
+- 所有虚拟动作 **0 PP、0 Bond XP、0 votes**。真实照护由员工负责，不暗示领养或所有权。
+
+### 多猫咖地图
+
+`CafeMap.tsx` 使用插画地图，支持拖动、缩放、复位、五个可选 marker 与联动预览。Cafe 延用 mapPosition 示意百分比，新增可选 specialty / featuredCatIds；无真实坐标、导航或地理定位。新增 `/cafes/taipa-atelier/`、`/cafes/coloane-cloud/`，共五家虚构概念店。`cafeCats()` 合并常驻及 featured guest 猫，保持原五只猫的归属与 ID。详情说明客串关系并展示关联猫、生日、CAT 101 和商品入口。
+
+### 粉丝榜、投票、商品
+
+`/leaderboard/fans/` 的贡献分从成功 vote 事件的唯一 ID 派生，每票 1 分；关注、消费、PP、XP 和虚拟互动均不增加贡献。三个化名示例粉丝使用明确标注的虚构种子分，You 来自本浏览器；不是全站共享排行。支持猫取本地历史投票最多的猫，分数相同时按 ID 排序。
+
+`VoteButton` 仅在命令成功后播放短庆祝卡，显示猫、+1、剩余票、排行榜已更新、分享和关闭；保留澳门日界三票限制、静音和 reduced-motion 样式。`public/merch/` 的八种 SVG 分别展示照片、贴纸、帆布袋、海报、数字包、季节礼盒、磁贴和饰品，图片明确为概念示意。保留筛选、详情、购物袋及模拟结算。
+
+### Credits 规则
+
+顶部积分旁问号打开原生 dialog，支持 Escape / 背景关闭，四种语言完整覆盖 `creditsRules`。现有规则不变：首次关注 20 PP 一次、签到 5 PP/日、员工互动 10 PP/猫/日、验证邀请模拟 30 PP 一次；模拟商品、已批准生日和照护消费 1 PP/MOP，预约请求无 PP，照护每天最多三次。兑换需余额及猫的 Bond 等级，每奖励每猫一次。无实现到期机制；清浏览器即丢失，不跨设备同步。不可买 PP、兑现、转让；无真实收款及退款流程。PP、Bond XP、免费投票互相独立。
+
+### 检查与后续
+
+已执行 npm ci、26 项测试、Lint、TypeScript、生产构建（39 静态页面）。浏览器实际检查桌面及 390×844 手机、四种语言、互动刷新保留、积分不变、投票庆祝与三票禁用、粉丝分同步、地图选店缩放拖动复位、积分弹窗、商品筛选详情及模拟结算。截图在 `docs/screenshots/round3-*`。自动化与手工范围、未测项见 QA 文档。
+
+团队先审查功能分支和 Preview；通过后再明确批准合并。仍是本地数据演示，无共享后端、真实交易、预约、直播、照护履约或 AI 对话。
+
+---
+
+## 2.1 历史交接（以下为旧版记录）
 
 ## 交付状态
 

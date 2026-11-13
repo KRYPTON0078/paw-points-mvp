@@ -1,5 +1,6 @@
 /** Editorial concepts only. No real visitors, partners or livestreams are represented. */
 export const featureLinks = [
+  {href:'/virtual-pet/mochi',name:'Virtual companion',copy:'A little company, wherever you are.',mark:'07'},
   {
     name: "CAT 101",
     copy: "A daily fan ritual. Three free votes, with personality at the heart of every season.",

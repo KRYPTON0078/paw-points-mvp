@@ -15,6 +15,8 @@ export type Command =
   | {type:'follow'|'unfollow'|'primary'|'vote'|'checkin'|'interaction';catId:string}
   | {type:'care';catId:string;packageId:string}
   | {type:'cart';productId:string;quantity:number}
+  | {type:'pet';catId:string;action:import('./models').PetAction;scene:import('./models').PetScene}
+  | {type:'pet-scene';catId:string;scene:import('./models').PetScene}
   | {type:'checkout'}
   | {type:'birthday';birthday:string}
   | {type:'book';packageId:string;date:string;guests:number;cafeId:string;theme:string}
@@ -52,6 +54,13 @@ export function act(state: DemoState, command: Command, id: string, now = new Da
     s.bondLedger.unshift({id:`${id}-${label}`,catId,amount,label,date});
   };
   switch (command.type) {
+    case 'pet-scene':
+      if (!['cafe','garden','bedroom','night'].includes(command.scene)) throw Error('Invalid scene');
+      s.petScenes = {...s.petScenes,[catId]:command.scene};break;
+    case 'pet':
+      if (!['pet','play','treat','talk'].includes(command.action)||!['cafe','garden','bedroom','night'].includes(command.scene)) throw Error('Invalid interaction');
+      s.petHistory = [{id,catId,action:command.action,scene:command.scene,date:now.toISOString()},...(s.petHistory??[])].slice(0,60);
+      break;
     case 'follow':
       if (s.cats[catId]?.active) throw Error('Already following');
       s.cats[catId] = {catId,xp:s.cats[catId]?.xp??0,active:true,since:s.cats[catId]?.since??date};

@@ -1,6 +1,6 @@
 export type VerificationStatus = 'verified' | 'pending' | 'not-provided';
 export interface User { id: string; name: string; birthday: string }
-export interface Cafe { id: string; name: string; location: string; address: string; description: string; image: string; mapPosition: [number, number]; sample: true; streamUrl: string | null; mapUrl?: string; coordinates?: {lat: number; lng: number} }
+export interface Cafe { id: string; name: string; location: string; address: string; description: string; image: string; mapPosition: [number, number]; sample: true; streamUrl: string | null; featuredCatIds?: string[]; specialty?: string; mapUrl?: string; coordinates?: {lat: number; lng: number} }
 export interface VaccinationRecord { label: string; status: VerificationStatus; lastVerified: string | null; sample: true }
 export interface CatIdentity { passportId: string; breed: string; birthDate: string; gender: string | null; origin: string; vaccination: VaccinationRecord; care: string }
 export interface Cat { id: string; name: string; age: number; image: string; trait: string; bio: string; cafeId: string; fans: number; seedVotes: number; identity: CatIdentity }
@@ -28,4 +28,9 @@ export interface DemoState {
   redemptions: Redemption[]; wallet: Voucher[]; visits: CheckIn[];
   cart: Record<string, number>; done: string[]; firstFollowAwarded: boolean;
   weeklyBonuses: string[]; badges: FanBadge[];
+  petHistory?: PetMoment[]; petScenes?: Record<string, PetScene>;
 }
+
+export type PetScene = 'cafe' | 'garden' | 'bedroom' | 'night';
+export type PetAction = 'pet' | 'play' | 'treat' | 'talk';
+export interface PetMoment { id: string; catId: string; action: PetAction; scene: PetScene; date: string }
