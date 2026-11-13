@@ -8,10 +8,11 @@ import {
   List,
   Map as MapIcon,
 } from "lucide-react";
-import { cafes, cats } from "../data/seed";
+import { cafes, cats, cafeCats, products } from "../data/seed";
 import { safeExternalUrl, stories } from "../data/world";
 import { useDemo } from "./DemoContext";
 import { CatCard, Empty, Notice, Title } from "./ui";
+import { CafeMap } from './CafeMap';
 export function CafeCards() {
   const { t } = useDemo();
   return (
@@ -32,8 +33,7 @@ export function CafeCards() {
             </small>
             <p className="cafe-residents">
               {t("Residents")}:{" "}
-              {cats
-                .filter((c) => c.cafeId === cafe.id)
+              {cafeCats(cafe.id)
                 .map((c) => c.name)
                 .join(" · ")}
             </p>
@@ -58,7 +58,7 @@ export function CatWorld({ cafeId }: { cafeId?: string }) {
   const cafe = cafes.find((c) => c.id === (cafeId ?? selected))!,
     filtered = cats.filter(
       (c) =>
-        (cafeFilter === "all" || c.cafeId === cafeFilter) &&
+        (cafeFilter === "all" || cafeCats(cafeFilter).some(v=>v.id===c.id)) &&
         (location === "all" ||
           cafes.find((f) => f.id === c.cafeId)?.location === location) &&
         (personality === "all" || c.id === personality) &&
@@ -92,6 +92,7 @@ export function CatWorld({ cafeId }: { cafeId?: string }) {
             <p>
               <MapPin size={15} /> {t(cafe.address)}
             </p>
+            <p>{t(cafe.specialty??cafe.description)}</p><small>{t("Featured cats may be guest characters from another concept café.")}</small>
             {safeExternalUrl(cafe.mapUrl) && (
               <a
                 className="text-link"
@@ -132,84 +133,13 @@ export function CatWorld({ cafeId }: { cafeId?: string }) {
             </div>
           </div>
           {view === "map" ? (
-            <div className="world-map-layout">
-              <div
-                className="illustrated-map"
-                role="group"
-                aria-label={t("Illustrated café map")}
-              >
-                <svg viewBox="0 0 800 500" aria-hidden="true">
-                  <path
-                    className="map-land"
-                    d="M80 220 400 40 730 220 410 430Z"
-                  />
-                  <path
-                    className="map-park"
-                    d="m390 70 150 83-100 63-151-85Z"
-                  />
-                  <path
-                    className="map-water"
-                    d="m130 290 280 155 320-183-32-22-291 164-242-138Z"
-                  />
-                  <path
-                    className="map-road"
-                    d="m150 237 260 143 251-144M410 380V188L230 89M410 188 570 95"
-                  />
-                  <g className="map-trees">
-                    <circle cx="440" cy="126" r="18" />
-                    <circle cx="477" cy="146" r="15" />
-                    <circle cx="405" cy="147" r="13" />
-                    <circle cx="294" cy="305" r="15" />
-                    <circle cx="267" cy="287" r="12" />
-                  </g>
-                </svg>
-                {cafes.map((c, i) => (
-                  <button
-                    aria-pressed={selected === c.id}
-                    className={
-                      "map-pin " + (selected === c.id ? "pin-selected" : "")
-                    }
-                    key={c.id}
-                    style={{
-                      left: c.mapPosition[0] + "%",
-                      top: c.mapPosition[1] + "%",
-                    }}
-                    onClick={() => setSelected(c.id)}
-                  >
-                    <span className="map-house">{["☀", "✿", "☾"][i]}</span>
-                    <span>{c.name}</span>
-                  </button>
-                ))}
-                <small className="map-legend">
-                  {t("ILLUSTRATIVE MAP · NOT FOR NAVIGATION")}
-                </small>
-              </div>
-              <article className="map-preview" aria-live="polite">
-                <img src={cafe.image} alt={cafe.name} />
-                <div>
-                  <span className="eyebrow">{t("SELECTED CAFÉ")}</span>
-                  <h3>{cafe.name}</h3>
-                  <p>{t(cafe.description)}</p>
-                  <small>{t(cafe.address)}</small>
-                  <p>
-                    {t("Residents")}:{" "}
-                    {cats
-                      .filter((c) => c.cafeId === cafe.id)
-                      .map((c) => c.name)
-                      .join(" · ")}
-                  </p>
-                  <Link className="button secondary" href={"/cafes/" + cafe.id}>
-                    {t("Explore café")}
-                    <ArrowUpRight size={16} />
-                  </Link>
-                </div>
-              </article>
-            </div>
+            <CafeMap selected={selected} onSelect={setSelected}/>
           ) : (
             <CafeCards />
           )}
         </>
       )}
+      {cafeId&&<section className="panel"><span className="eyebrow">{t('LITTLE KEEPSAKES')}</span><h2>{t('From this little world.')}</h2><div className="cafe-product-strip">{products.filter(p=>p.revenueShareCafeId===cafe.id||cafeCats(cafe.id).some(c=>c.id===p.catId)).slice(0,3).map(p=><Link href="/shop" key={p.id}><img src={`${process.env.NEXT_PUBLIC_BASE_PATH??''}/merch/${p.kind}.svg`} alt={t(p.name)}/><strong>{t(p.name)}</strong><small>MOP {p.price} · {t(p.availability)}</small></Link>)}</div><div className="actions"><Link className="button secondary" href="/cat101">CAT 101 ↗</Link><Link className="text-link" href="/shop">{t('Explore the shop')} ↗</Link></div></section>}
       <section className="resident-section">
         <div className="section-head">
           <div>
@@ -220,7 +150,7 @@ export function CatWorld({ cafeId }: { cafeId?: string }) {
             {filtered.length} {t("cats found")}
           </span>
         </div>
-        <div className="world-filters">
+        <Link className="text-link" href="/virtual-pet/mochi">{t("Virtual companion")} ♡</Link><div className="world-filters">
           <label>
             {t("Cafés")}
             <select

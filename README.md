@@ -1,12 +1,33 @@
-# Paw Points 2.1
+# Paw Points 2.2
 
 **Every Cat Has a Story. Every Fan Makes It Grow.**
 
 猫咪 IP 与粉丝经济互动 Demo：发现猫咪 → Cat ID → CAT 101 投票 → 建立关系 → 生日体验 → IP 商品。咖啡、饮品点单及其积分规则已移除。
 
-三家概念猫咖（Paw & Brew Macau、Garden House、The Moon Room），演示用户 Alex，五位示例猫咪 Mochi、Luna、Milo、Coco、Nori。四语言：简体中文、繁体中文、English、Português（欧洲葡萄牙语）；语言选择跨页面和刷新保留。
+五家概念猫咖（Paw & Brew Macau、Garden House、The Moon Room、Taipa Cat Atelier、Coloane Cloud Club），演示用户 Alex，五位示例猫咪 Mochi、Luna、Milo、Coco、Nori。四语言：简体中文、繁体中文、English、Português（欧洲葡萄牙语）；语言选择跨页面和刷新保留。
 
 2.1 新增品牌首页、猫咖插画地图与列表、故事、离线直播发现、品牌说明、商城组合筛选和 Paw Guide。核心积分、投票、生日预约及 2.0 本地历史继续保留。验收与截图见 [QA_2_1.md](docs/QA_2_1.md)，团队接手见 [GROKBOT_HANDOFF.md](docs/GROKBOT_HANDOFF.md)。
+
+## Round 4 当前版本
+
+新增访客/本机演示登录、五猫互动房间、亲密度兑换积分、店员引导体验申请与取消退款；完整四语，保留旧 PP/XP 和历史。入口 `/cat-room/`、`/credits/`、`/login/`、`/signup/`。
+
+DEMO 参数：合资格互动 +10 Affinity/等量 Bond XP，每猫每动作每日一次、全账户每日 10 次；1 Affinity = 1 Credit，100 Credits = 申请 1 分钟体验。可兑换 Affinity 独立于累计 XP，兑换不降级。参数在 `src/lib/round4.ts`。所有账户、交易和申请均为浏览器本地模拟。
+
+分支 `feature/paw-points-round-4`，不自动合并或发布 Production。最新验收见 [QA_ROUND4.md](docs/QA_ROUND4.md)，迁移与接手说明见 [GROKBOT_HANDOFF.md](docs/GROKBOT_HANDOFF.md)。以下保留历史版本说明。
+
+## 2.2 Round 3 当前版本
+
+新增照片式 2D 虚拟伙伴（四场景、四种互动、本地手记、零 PP/XP）、五店可拖动缩放地图、成功投票庆祝、粉丝贡献榜、八类商品概念图和积分说明弹窗。保留四语与旧本地数据。
+
+- 伙伴：`/virtual-pet/mochi/`（其他四只猫同样可用）
+- 粉丝榜：`/leaderboard/fans/`
+- 新店：`/cafes/taipa-atelier/`、`/cafes/coloane-cloud/`
+- 验收：[QA_2_2.md](docs/QA_2_2.md)；架构与团队交接：[GROKBOT_HANDOFF.md](docs/GROKBOT_HANDOFF.md)
+- 功能分支：`feature/paw-points-round-3`，本轮不自动合并 main 或部署 Production。
+- Vercel Preview：https://paw-points-mvp-git-feature-paw-points-round-3-knighty-hub-hit.vercel.app （跟随功能分支，访问权限由 Vercel 项目设置决定）
+
+以下 2.1 说明保留作历史背景；当前功能以本节和 2.2 交接记录为准。仍为本浏览器演示，没有跨设备数据同步或真实交易。
 
 ## 本地运行
 
