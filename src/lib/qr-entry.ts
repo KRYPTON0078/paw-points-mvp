@@ -1,7 +1,7 @@
 import { cafes, cats } from '../data/seed';
 export const resolveCafe = (id: string) => cafes.find(c => c.id === (id === 'pawbrew' ? 'paw-macau' : id));
 export function siteUrl() {
-  const value = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_BASE_PATH ? 'https://knighty-hub-hit.github.io'+process.env.NEXT_PUBLIC_BASE_PATH : 'http://localhost:3000');
+  const value = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_BASE_PATH ? 'https://knighty-hub-hit.github.io'+process.env.NEXT_PUBLIC_BASE_PATH : 'https://paw-points-mvp.vercel.app');
   const url = new URL(value);
   if (!['http:', 'https:'].includes(url.protocol)) throw new Error('Site URL must use HTTP or HTTPS');
   return url.origin + url.pathname.replace(/\/$/,'');
