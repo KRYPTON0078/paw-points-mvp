@@ -16,11 +16,11 @@ test('all four languages have non-empty dictionary values and preserve names',()
 });
 test('all rendered copy and dynamic catalog content have four-language coverage',()=>{
   const keys=new Set<string>([...cats.flatMap(c=>[c.trait,c.bio,c.identity.breed,c.identity.origin,c.identity.care]),...products.flatMap(p=>[p.name,p.description]),...names,...rewards.flatMap(r=>[r.name,r.description]),...eventPackages.flatMap(p=>p.benefits),...carePackages.map(p=>p.name),...themes]);
-  for(const file of ['PawApp.tsx','Discovery.tsx','Experiences.tsx','Account.tsx','ui.tsx']){
+  for(const file of ['PawApp.tsx','Discovery.tsx','Experiences.tsx','Account.tsx','ui.tsx','QrEntry.tsx']){
     const source=ts.createSourceFile(file,fs.readFileSync('src/components/'+file,'utf8'),ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
     function visit(node:ts.Node){
       if(ts.isCallExpression(node)&&node.expression.getText(source)==='t'){
-        function collect(n:ts.Node){if(ts.isStringLiteral(n)&&n.text)keys.add(n.text);else ts.forEachChild(n,collect)}
+        function collect(n:ts.Node){if(ts.isStringLiteral(n)&&n.text)keys.add(n.text);else if(ts.isConditionalExpression(n)){collect(n.whenTrue);collect(n.whenFalse)}else ts.forEachChild(n,collect)}
         node.arguments.forEach(collect);
       }
       ts.forEachChild(node,visit);

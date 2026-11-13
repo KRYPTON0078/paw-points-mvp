@@ -1,8 +1,27 @@
-# Extension points
-- Replace local state with authenticated Supabase repositories and server-authoritative idempotency.
-- Add café scope to all entities, configurable partner levels and reward policies.
-- Add QR-verified visits, staff approvals, appointment capacity and care fulfillment queues.
-- Add payment provider webhooks and auditable orders.
-- Add separate merchant dashboard, opt-in AI updates/support/marketing, cameras and robotic coffee adapters.
-- Add human-reviewed adoption workflow. Adoption is never a points purchase.
-- Before production: real café/photo permissions, full model schemas, referral verification, consecutive-week bonuses, offline photos and accessibility audit.
+# Paw Points 2.0 Roadmap
+
+## 本次已实现（本地 Demo）
+
+- P0：移除饮品订购、重设计首页、5 猫 Cat ID、CAT 101、生日申请、IP 商品模拟结算、四语言、手机导航、持久化和静态构建。
+- P1：独立 PP / XP 账本、多猫关系、签到／互动／三周奖励、奖励券包、模拟远程照护、过渡动画、演示说明和重置。
+- 保留二维码工作室与猫咖入口；修正 Pages 子路径及本地入口追踪，补全四语言。
+
+## 下一阶段：共享状态与真实业务
+
+1. Supabase 登录、数据库、行级权限；将 engine 规则转为服务端权威事务、幂等键和审计记录。
+2. 数据库全局月赛季投票、防滥用、速率限制、赛季归档；不引入付费票。
+3. 真实猫咖、动物身份和医疗证据审核流程；仅工作人员提供的有效证据允许标记 verified。
+4. 门店签到与互动核验、照护服务上限和履约队列；福利与休息规则优先于商业活动。
+5. 生日时段容量、人工批准、取消／退款规则；真实支付回调确认后发放 PP。
+6. 商品库存、支付、配送追踪、退款冲销 PP、猫咖分成和 IP 授权合同。
+
+## 扩展模块（未实现）
+
+- 多猫咖租户与可配置会员／积分政策。
+- 品牌联名、限量发行、赛季赞助展示与收入分成报表。
+- 仅使用已核实猫咪内容生成 AI 营销草稿、人工审核发布；AI 客服知识库。
+- 商家运营及福利审核界面、真实跨设备扫码统计（含隐私与保留期设计）。
+- 有资格猫咪的人审领养申请：筛选、面谈、交接跟踪。XP 不等于领养资格保证。
+- 上线前完成无障碍、隐私／合规、素材授权、支付安全与服务端规则测试。
+
+此路线图不代表已实现或上线。Demo 的模拟核验、付款、预约、照护及券均不可用于真实服务。

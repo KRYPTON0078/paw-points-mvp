@@ -1,1 +1,10 @@
-'use client';import {create} from 'zustand';import {persist} from 'zustand/middleware';import {initial,act,State} from '../lib/engine';export const usePawStore=create<{data:State;run:(t:string,c?:string,v?:number,id?:string)=>void;qty:(id:string,q:number)=>void;reset:()=>void}>()(persist(set=>({data:initial(),run:(t,c,v,id)=>set(s=>({data:act(s.data,t,c,v,id)})),qty:(id,q)=>set(s=>({data:{...s.data,cart:{...s.data.cart,[id]:Math.max(0,q)}}})),reset:()=>set({data:initial()})}),{name:'paw-points-v1'}));
+'use client';
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { initial, act, type Command } from '../lib/engine';
+import type { DemoState } from '../lib/models';
+export const usePawStore = create<{data:DemoState;dispatch:(command:Command,id?:string)=>void;reset:()=>void}>()(persist(set=>({
+  data:initial(),
+  dispatch:(command,id=crypto.randomUUID())=>set(state=>({data:act(state.data,command,id)})),
+  reset:()=>set({data:initial()}),
+}),{name:'paw-points-v2',version:2}));
