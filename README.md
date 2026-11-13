@@ -8,6 +8,14 @@
 
 2.1 新增品牌首页、猫咖插画地图与列表、故事、离线直播发现、品牌说明、商城组合筛选和 Paw Guide。核心积分、投票、生日预约及 2.0 本地历史继续保留。验收与截图见 [QA_2_1.md](docs/QA_2_1.md)，团队接手见 [GROKBOT_HANDOFF.md](docs/GROKBOT_HANDOFF.md)。
 
+## Round 4 当前版本
+
+新增访客/本机演示登录、五猫互动房间、亲密度兑换积分、店员引导体验申请与取消退款；完整四语，保留旧 PP/XP 和历史。入口 `/cat-room/`、`/credits/`、`/login/`、`/signup/`。
+
+DEMO 参数：合资格互动 +10 Affinity/等量 Bond XP，每猫每动作每日一次、全账户每日 10 次；1 Affinity = 1 Credit，100 Credits = 申请 1 分钟体验。可兑换 Affinity 独立于累计 XP，兑换不降级。参数在 `src/lib/round4.ts`。所有账户、交易和申请均为浏览器本地模拟。
+
+分支 `feature/paw-points-round-4`，不自动合并或发布 Production。最新验收见 [QA_ROUND4.md](docs/QA_ROUND4.md)，迁移与接手说明见 [GROKBOT_HANDOFF.md](docs/GROKBOT_HANDOFF.md)。以下保留历史版本说明。
+
 ## 2.2 Round 3 当前版本
 
 新增照片式 2D 虚拟伙伴（四场景、四种互动、本地手记、零 PP/XP）、五店可拖动缩放地图、成功投票庆祝、粉丝贡献榜、八类商品概念图和积分说明弹窗。保留四语与旧本地数据。

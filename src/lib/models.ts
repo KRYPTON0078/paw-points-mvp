@@ -22,6 +22,7 @@ export interface CareOrder { id: string; catId: string; packageId: string; amoun
 export interface Voucher { id: string; rewardId: string; catId: string; status: 'demo-only' }
 export interface CheckIn { day: string; catId: string }
 export interface DemoState {
+  demoSignedIn?: boolean; affinity?: number; affinityLedger?: AffinityEntry[]; experienceRequests?: ExperienceRequest[];
   user: User; points: number; primary: string; cats: Record<string, CatRelationship>;
   pointsLedger: PointsTransaction[]; bondLedger: BondTransaction[]; votes: Vote[];
   bookings: BirthdayBooking[]; orders: MerchandiseOrder[]; careOrders: CareOrder[];
@@ -34,3 +35,7 @@ export interface DemoState {
 export type PetScene = 'cafe' | 'garden' | 'bedroom' | 'night';
 export type PetAction = 'pet' | 'play' | 'treat' | 'talk';
 export interface PetMoment { id: string; catId: string; action: PetAction; scene: PetScene; date: string }
+
+export type RoomAction = 'pet' | 'play' | 'seek' | 'feed' | 'rest';
+export interface AffinityEntry { id: string; catId: string; action?: RoomAction; amount: number; date: string; kind: 'earn' | 'convert' }
+export interface ExperienceRequest { id: string; catId: string; cafeId: string; minutes: number; cost: number; date: string; status: 'awaiting-staff' | 'cancelled-refunded' }

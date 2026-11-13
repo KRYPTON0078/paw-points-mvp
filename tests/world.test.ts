@@ -4,7 +4,7 @@ import { products, cafes, cats } from "../src/data/seed";
 import { categories, emptyFilters, filterProducts } from "../src/lib/catalog";
 import { assistantIntent, demoAssistant } from "../src/lib/assistant";
 import { stories, safeExternalUrl } from "../src/data/world";
-import { act, initial, remainingVotes } from "../src/lib/engine";
+import { act, initial as guestInitial, remainingVotes } from "../src/lib/engine";
 import type { DemoState } from "../src/lib/models";
 import { qrTarget } from "../src/lib/qr-entry";
 test("shop combines category, color, inclusive price, type and availability; resetting restores all products", () => {
@@ -186,3 +186,5 @@ test("QR targets use public HTTPS production default outside GitHub Pages", () =
     else process.env.NEXT_PUBLIC_BASE_PATH = base;
   }
 });
+
+function initial():import('../src/lib/models').DemoState{return {...guestInitial(),demoSignedIn:true};}

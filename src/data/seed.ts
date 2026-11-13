@@ -36,6 +36,6 @@ export const rewards: Reward[] = [
   {id:'wallpaper',name:'Cat portrait wallpaper',cost:40,level:1,description:'A demo digital collectible voucher featuring your companion.'},
   {id:'invite',name:'Personalized fan invitation',cost:100,level:1,description:'A demo invitation design voucher; staff approval is required.'},
   {id:'priority',name:'Priority event request',cost:150,level:2,description:'Priority request access only. Availability and animal welfare rules still apply.'},
-  {id:'vip',name:'Companion experience request',cost:300,level:3,description:'Request a staff-guided experience. Physical interaction is never guaranteed.'},
+  {id:'vip',name:'Companion experience request',cost:300,level:3,description:'Apply for a staff-guided experience.'},
   {id:'adoption',name:'Adoption application information',cost:0,level:4,description:'Information only. Eligibility, welfare checks and independent human review are required.'},
 ];

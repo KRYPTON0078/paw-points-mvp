@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { act, dayKey, initial, level, rankings, remainingVotes, seasonAt, localVotingService } from '../src/lib/engine';
+import { act, dayKey, initial as guestInitial, level, rankings, remainingVotes, seasonAt, localVotingService } from '../src/lib/engine';
 import { cats, products } from '../src/data/seed';
 import type { Command, State } from '../src/lib/engine';
 const now=new Date('2026-11-13T04:00:00Z');
@@ -85,3 +85,5 @@ test('levels and medical sample statuses are safe and all passports distinct',()
   assert.equal(new Set(cats.map(c=>c.identity.passportId)).size,5);
   assert.ok(cats.every(c=>c.identity.vaccination.sample&&c.identity.vaccination.status!=='verified'&&c.identity.vaccination.lastVerified===null));
 });
+
+function initial():import('../src/lib/models').DemoState{return {...guestInitial(),demoSignedIn:true};}

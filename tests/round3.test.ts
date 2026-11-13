@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { act, initial, remainingVotes } from '../src/lib/engine';
+import { act, initial as guestInitial, remainingVotes } from '../src/lib/engine';
 import { fanContribution, fanRankings, petActions, petScenes } from '../src/lib/round3';
 import { cafes, cafeCats, cats, products } from '../src/data/seed';
 const now = new Date('2026-11-13T04:00:00Z');
@@ -58,3 +58,5 @@ test('five fictional cafes have real cat identities and all merchandise kinds ha
  assert.equal(artworks.size,new Set(products.map(p=>p.kind)).size);
  for(const scene of petScenes)assert.ok(fs.existsSync(`public/scenes/${scene.id}.svg`));
 });
+
+function initial():import('../src/lib/models').DemoState{return {...guestInitial(),demoSignedIn:true};}

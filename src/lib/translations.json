@@ -1255,9 +1255,9 @@
     "Coleção sazonal de postais e autocolantes de Mochi. Um pedacinho de calor para guardar."
   ],
   "CAT IP COLLECTION": [
-    "猫咪 IP 收藏系列",
-    "貓咪 IP 收藏系列",
-    "COLEÇÃO IP FELINA"
+    "猫咪 IP 收藏",
+    "貓咪 IP 收藏",
+    "COLEÇÃO IP DOS GATOS"
   ],
   "COLLECTION": [
     "收藏系列",
@@ -1763,11 +1763,6 @@
     "仅提供优先申请资格，仍受档期和动物福祉规则限制。",
     "僅提供優先申請資格，仍受檔期和動物福祉規則限制。",
     "Apenas acesso prioritário ao pedido. Sujeito a disponibilidade e bem-estar animal."
-  ],
-  "Request a staff-guided experience. Physical interaction is never guaranteed.": [
-    "申请店员引导的体验，不保证与动物实际互动。",
-    "申請店員引導的體驗，不保證與動物實際互動。",
-    "Pede uma experiência orientada pela equipa. Sem interação física garantida."
   ],
   "Information only. Eligibility, welfare checks and independent human review are required.": [
     "仅提供信息，须经过资格评估、动物福祉检查和独立人工审核。",
@@ -3828,5 +3823,430 @@
     "PP 用于演示奖励；Bond XP 记录与每只猫的亲密度。CAT 101 免费投票按澳门日期每天共 3 票，每次成功投票增加 1 点粉丝贡献值。虚拟互动不发放任何奖励。",
     "PP 用於演示獎勵；Bond XP 記錄與每隻貓的親密度。CAT 101 免費投票按澳門日期每天共 3 票，每次成功投票增加 1 點粉絲貢獻值。虛擬互動不發放任何獎勵。",
     "PP serve para recompensas de demonstração. Bond XP acompanha a relação com cada gato. Há 3 votos gratuitos por dia de Macau. Cada voto aceite dá 1 ponto de contribuição. As reações virtuais não dão recompensas."
+  ],
+  "LOCAL DEMO ACCOUNT": [
+    "本机演示账户",
+    "本機示範帳戶",
+    "CONTA DE DEMONSTRAÇÃO LOCAL"
+  ],
+  "Log in": [
+    "登录",
+    "登入",
+    "Entrar"
+  ],
+  "Sign up": [
+    "注册",
+    "註冊",
+    "Criar conta"
+  ],
+  "Log out": [
+    "退出登录",
+    "登出",
+    "Sair"
+  ],
+  "Log in / Sign up": [
+    "登录 / 注册",
+    "登入 / 註冊",
+    "Entrar / Criar conta"
+  ],
+  "Enter demo as Alex": [
+    "以 Alex 进入演示",
+    "以 Alex 進入示範",
+    "Entrar na demonstração como Alex"
+  ],
+  "Continue as Alex": [
+    "以 Alex 继续",
+    "以 Alex 繼續",
+    "Continuar como Alex"
+  ],
+  "Skip · browse as guest": [
+    "跳过，以访客浏览",
+    "略過，以訪客瀏覽",
+    "Saltar · visitar como convidado"
+  ],
+  "One shared demo account in this browser. No password, identity verification or secure payments. Do not enter personal information.": [
+    "本浏览器共用一个演示账户，无密码、身份验证或安全支付。请勿输入个人信息。",
+    "本瀏覽器共用一個示範帳戶，無密碼、身分驗證或安全付款。請勿輸入個人資料。",
+    "Uma conta de demonstração partilhada neste navegador. Sem palavra-passe, verificação de identidade ou pagamentos seguros. Não introduza dados pessoais."
+  ],
+  "Your existing local progress is preserved. This is not a real account or cross-device login.": [
+    "保留已有本机进度。这不是正式账户，也不支持跨设备登录。",
+    "保留已有本機進度。這不是正式帳戶，也不支援跨裝置登入。",
+    "O progresso local existente é preservado. Não é uma conta real nem permite entrar noutro dispositivo."
+  ],
+  "A little world to come back to.": [
+    "留一个下次见面的位置。",
+    "留一個下次見面的位置。",
+    "Um pequeno mundo ao qual regressar."
+  ],
+  "Sign in to save progress, earn Credits and make demo requests.": [
+    "登录后可保存进度、赚取积分和提交演示申请。",
+    "登入後可儲存進度、賺取積分和提交示範申請。",
+    "Entre para guardar progresso, ganhar Créditos e fazer pedidos de demonstração."
+  ],
+  "Cat Room": [
+    "猫咪房间",
+    "貓咪房間",
+    "Sala dos gatos"
+  ],
+  "CAT ROOM · A LITTLE CLOSER": [
+    "猫咪房间 · 再靠近一点",
+    "貓咪房間 · 再靠近一點",
+    "SALA DOS GATOS · UM POUCO MAIS PERTO"
+  ],
+  "Come in. Stay a little.": [
+    "进来坐坐，陪它一会儿。",
+    "進來坐坐，陪牠一會兒。",
+    "Entre. Fique um bocadinho."
+  ],
+  "Meet their little personalities, one quiet moment at a time.": [
+    "在安静的小片刻里，认识每只猫的性格。",
+    "在安靜的小片刻裡，認識每隻貓的性格。",
+    "Conheça cada personalidade, um momento tranquilo de cada vez."
+  ],
+  "Local demo account": [
+    "本机演示账户",
+    "本機示範帳戶",
+    "Conta de demonstração local"
+  ],
+  "Guest preview": [
+    "访客预览",
+    "訪客預覽",
+    "Pré-visualização de convidado"
+  ],
+  "Available Affinity": [
+    "可兑换亲密度",
+    "可兌換親密度",
+    "Afinidade disponível"
+  ],
+  "Affinity & Credits": [
+    "亲密度与积分",
+    "親密度與積分",
+    "Afinidade e Créditos"
+  ],
+  "Affinity": [
+    "亲密度",
+    "親密度",
+    "Afinidade"
+  ],
+  "Credits": [
+    "积分",
+    "積分",
+    "Créditos"
+  ],
+  "Credits · PP": [
+    "积分 · PP",
+    "積分 · PP",
+    "Créditos · PP"
+  ],
+  "Choose a cat": [
+    "选择猫咪",
+    "選擇貓咪",
+    "Escolher um gato"
+  ],
+  "Affinity earned": [
+    "累计亲密度",
+    "累計親密度",
+    "Afinidade acumulada"
+  ],
+  "Photo-based virtual preview": [
+    "照片虚拟互动预览",
+    "照片虛擬互動預覽",
+    "Prévia virtual com fotografia"
+  ],
+  "Small moments, thoughtful limits.": [
+    "小小互动，适度陪伴。",
+    "小小互動，適度陪伴。",
+    "Pequenos momentos, limites ponderados."
+  ],
+  "Affinity per eligible moment": [
+    "亲密度 / 有效互动",
+    "親密度 / 有效互動",
+    "Afinidade por momento elegível"
+  ],
+  "today": [
+    "今日",
+    "今日",
+    "hoje"
+  ],
+  "Each Pet, Play, Seek and simulated Feed earns once per cat per Macau day. Rest earns nothing. Repeated clicks only replay the reaction.": [
+    "抚摸、玩耍、呼唤和模拟喂食，每只猫每日各计一次收益（澳门时间）。休息不计收益，重复点击仅重播反应。",
+    "撫摸、玩耍、呼喚和模擬餵食，每隻貓每日各計一次收益（澳門時間）。休息不計收益，重複點擊僅重播反應。",
+    "Carinho, brincar, chamar e alimentação simulada rendem uma vez por gato por dia de Macau. Descansar não rende. Cliques repetidos só repetem a reação."
+  ],
+  "New room Affinity also adds the same Bond XP once. Conversion never lowers Bond XP.": [
+    "房间新增亲密度会同步计入等量 Bond XP，仅计一次。兑换不会降低 Bond XP。",
+    "房間新增親密度會同步計入等量 Bond XP，僅計一次。兌換不會降低 Bond XP。",
+    "A nova Afinidade da sala também acrescenta o mesmo Bond XP uma vez. A conversão nunca reduz o Bond XP."
+  ],
+  "Guest reactions are free previews. Sign in to earn Affinity and Credits.": [
+    "访客可免费预览反应，登录后才能获得亲密度与积分。",
+    "訪客可免費預覽反應，登入後才能獲得親密度與積分。",
+    "As reações de convidados são prévias gratuitas. Entre para ganhar Afinidade e Créditos."
+  ],
+  "Virtual actions do not trigger real feeding or staff activity. Real visits require staff guidance and welfare checks; a cat may choose to rest.": [
+    "虚拟动作不会触发现实喂食或店员操作。实际到店体验需要店员引导及福利评估，猫咪可以选择休息。",
+    "虛擬動作不會觸發現實餵食或店員操作。實際到店體驗需要店員引導及福利評估，貓咪可以選擇休息。",
+    "As ações virtuais não ativam alimentação real nem ações dos funcionários. Visitas reais exigem orientação e avaliação de bem-estar; o gato pode descansar."
+  ],
+  "Little keepsakes": [
+    "小小纪念",
+    "小小紀念",
+    "Pequenas recordações"
+  ],
+  "Concept mockups only. Prices and checkout are simulated.": [
+    "仅为概念效果图，价格与结算均为模拟。",
+    "僅為概念效果圖，價格與結帳均為模擬。",
+    "Apenas maquetas conceptuais. Preços e compras são simulados."
+  ],
+  "LOCAL DEMO WALLET": [
+    "本机演示钱包",
+    "本機示範錢包",
+    "CARTEIRA DE DEMONSTRAÇÃO LOCAL"
+  ],
+  "A little connection. Something to look forward to.": [
+    "一点点连接，一份小期待。",
+    "一點點連結，一份小期待。",
+    "Uma pequena ligação. Algo por que esperar."
+  ],
+  "DEMO rules only. No real payment, booking or commercial entitlement. All progress stays in this browser.": [
+    "仅为演示规则，不产生实际支付、预约或商业权益。进度仅保存在本浏览器。",
+    "僅為示範規則，不產生實際付款、預約或商業權益。進度僅儲存在本瀏覽器。",
+    "Regras de demonstração. Sem pagamento, reserva ou direito comercial real. O progresso fica neste navegador."
+  ],
+  "Convert Affinity": [
+    "兑换亲密度",
+    "兌換親密度",
+    "Converter Afinidade"
+  ],
+  "DEMO rate": [
+    "演示比率",
+    "示範比率",
+    "Taxa de demonstração"
+  ],
+  "Conversion amount": [
+    "兑换数量",
+    "兌換數量",
+    "Quantidade a converter"
+  ],
+  "Credits received": [
+    "获得积分",
+    "獲得積分",
+    "Créditos a receber"
+  ],
+  "Review conversion": [
+    "检查兑换",
+    "檢查兌換",
+    "Rever conversão"
+  ],
+  "Earn Affinity in Cat Room": [
+    "去猫咪房间赚取亲密度",
+    "去貓咪房間賺取親密度",
+    "Ganhar Afinidade na sala dos gatos"
+  ],
+  "Apply for a staff-guided experience.": [
+    "申请店员引导的体验",
+    "申請店員引導的體驗",
+    "Solicitar uma experiência orientada por funcionários."
+  ],
+  "minute": [
+    "分钟",
+    "分鐘",
+    "minuto(s)"
+  ],
+  "Minutes requested": [
+    "申请分钟数",
+    "申請分鐘數",
+    "Minutos solicitados"
+  ],
+  "Credits required": [
+    "所需积分",
+    "所需積分",
+    "Créditos necessários"
+  ],
+  "Available balance": [
+    "可用余额",
+    "可用餘額",
+    "Saldo disponível"
+  ],
+  "Review request": [
+    "检查申请",
+    "檢查申請",
+    "Rever pedido"
+  ],
+  "Staff approval required. This is a request for real-world guided time, not a guarantee of animal participation. No request is sent to a real café.": [
+    "须经店员审批。这是实际到店引导时间的申请，猫咪是否参与由福利状况决定。不会发送给真实猫咖。",
+    "須經店員審批。這是實際到店引導時間的申請，貓咪是否參與由福利狀況決定。不會傳送給真實貓咖。",
+    "Exige aprovação dos funcionários. É um pedido de tempo presencial orientado; a participação do animal depende do bem-estar. Não é enviado a um café real."
+  ],
+  "Confirm demo transaction": [
+    "确认演示交易",
+    "確認示範交易",
+    "Confirmar transação de demonstração"
+  ],
+  "Pending experience requests can be cancelled for a full Credits refund once. No cash refunds, transfer or expiry are implemented.": [
+    "待审批的体验申请可取消，积分全额退回一次。不支持现金退款或转让，尚未设置过期规则。",
+    "待審批的體驗申請可取消，積分全額退回一次。不支援現金退款或轉讓，尚未設定到期規則。",
+    "Pedidos pendentes podem ser cancelados com devolução integral dos Créditos uma vez. Sem reembolso em dinheiro, transferência ou expiração implementados."
+  ],
+  "Confirm": [
+    "确认",
+    "確認",
+    "Confirmar"
+  ],
+  "Experience requests": [
+    "体验申请",
+    "體驗申請",
+    "Pedidos de experiência"
+  ],
+  "No requests yet.": [
+    "还没有申请。",
+    "還沒有申請。",
+    "Ainda não há pedidos."
+  ],
+  "Cancelled · Credits refunded": [
+    "已取消 · 积分已退回",
+    "已取消 · 積分已退回",
+    "Cancelado · Créditos devolvidos"
+  ],
+  "Cancel & refund Credits": [
+    "取消并退回积分",
+    "取消並退回積分",
+    "Cancelar e devolver Créditos"
+  ],
+  "Affinity history": [
+    "亲密度记录",
+    "親密度記錄",
+    "Histórico de Afinidade"
+  ],
+  "No transactions yet.": [
+    "还没有交易记录。",
+    "還沒有交易記錄。",
+    "Ainda não há transações."
+  ],
+  "Demo transaction saved": [
+    "演示交易已保存",
+    "示範交易已儲存",
+    "Transação de demonstração guardada"
+  ],
+  "Cat Room affinity": [
+    "猫咪房间亲密度",
+    "貓咪房間親密度",
+    "Afinidade da sala dos gatos"
+  ],
+  "Demo Affinity conversion": [
+    "演示亲密度兑换",
+    "示範親密度兌換",
+    "Conversão de Afinidade de demonstração"
+  ],
+  "Staff-guided experience request": [
+    "店员引导体验申请",
+    "店員引導體驗申請",
+    "Pedido de experiência orientada"
+  ],
+  "Experience cancellation refund": [
+    "体验取消退回积分",
+    "體驗取消退回積分",
+    "Devolução por cancelamento da experiência"
+  ],
+  "Invalid Affinity amount": [
+    "亲密度数量无效",
+    "親密度數量無效",
+    "Quantidade de Afinidade inválida"
+  ],
+  "Invalid duration": [
+    "时长无效",
+    "時長無效",
+    "Duração inválida"
+  ],
+  "Pet": [
+    "抚摸",
+    "撫摸",
+    "Fazer carinho"
+  ],
+  "Play": [
+    "玩耍",
+    "玩耍",
+    "Brincar"
+  ],
+  "Seek": [
+    "呼唤 / 寻找",
+    "呼喚 / 尋找",
+    "Chamar / Procurar"
+  ],
+  "Feed · simulated": [
+    "模拟喂食",
+    "模擬餵食",
+    "Alimentar · simulação"
+  ],
+  "Rest": [
+    "休息",
+    "休息",
+    "Descansar"
+  ],
+  "A gentle lean into your hand.": [
+    "轻轻靠近你的手。",
+    "輕輕靠近你的手。",
+    "Inclina-se suavemente para a sua mão."
+  ],
+  "A curious hop toward the toy!": [
+    "好奇地跳向小玩具！",
+    "好奇地跳向小玩具！",
+    "Um salto curioso em direção ao brinquedo!"
+  ],
+  "A little peek: here I am!": [
+    "探出小脑袋：我在这里！",
+    "探出小腦袋：我在這裡！",
+    "Espreita um pouco: estou aqui!"
+  ],
+  "A pretend snack, a happy wiggle. No real food is delivered.": [
+    "假装吃个小点心，开心晃一晃。不会配送真实食物。",
+    "假裝吃個小點心，開心晃一晃。不會配送真實食物。",
+    "Um petisco imaginário e um abanar feliz. Não é entregue comida real."
+  ],
+  "Eyes closed. A little room for quiet.": [
+    "闭上眼睛，安静休息一会儿。",
+    "閉上眼睛，安靜休息一會兒。",
+    "Olhos fechados. Um bocadinho de sossego."
+  ],
+  "Cozy Cat Café": [
+    "温馨猫咖",
+    "溫馨貓咖",
+    "Café acolhedor dos gatos"
+  ],
+  "Sunny Window": [
+    "阳光窗边",
+    "陽光窗邊",
+    "Janela ao sol"
+  ],
+  "Garden": [
+    "花园",
+    "花園",
+    "Jardim"
+  ],
+  "Guided experience requests": [
+    "引导体验申请",
+    "引導體驗申請",
+    "Pedidos de experiência orientada"
+  ],
+  "PP cannot be purchased, refunded for cash or transferred. No real money is collected. Pending guided-experience requests can be cancelled for a full Credits refund once.": [
+    "积分不能购买、兑现或转让，不收取真实款项。待审批引导体验申请可取消，积分全额退回一次。",
+    "積分不能購買、兌現或轉讓，不收取真實款項。待審批引導體驗申請可取消，積分全額退回一次。",
+    "Não se podem comprar, transferir ou trocar PP por dinheiro. Não se cobra dinheiro real. Pedidos de experiência pendentes podem ser cancelados com devolução integral dos Créditos uma vez."
+  ],
+  "PP pays for demo rewards. Bond XP tracks each cat’s relationship. Free CAT 101 votes are limited to 3 per Macau day. One accepted vote adds 1 fan contribution point. Legacy virtual pet reactions award nothing. Eligible Cat Room moments earn convertible Affinity and matching Bond XP once.": [
+    "PP 用于演示奖励；Bond XP 记录每只猫的关系等级。CAT 101 每澳门日限 3 次免费投票，每个有效票计 1 粉丝贡献分。旧虚拟陪伴不计收益；新猫咪房间有效互动只计一次可兑换亲密度及等量 Bond XP。",
+    "PP 用於示範獎勵；Bond XP 記錄每隻貓的關係等級。CAT 101 每澳門日限 3 次免費投票，每個有效票計 1 粉絲貢獻分。舊虛擬陪伴不計收益；新貓咪房間有效互動只計一次可兌換親密度及等量 Bond XP。",
+    "PP serve para prémios de demonstração. Bond XP regista a relação com cada gato. Há 3 votos CAT 101 gratuitos por dia de Macau; cada voto aceite soma 1 ponto de contribuição. O companheiro antigo não rende. Momentos elegíveis da nova sala rendem Afinidade convertível e Bond XP igual uma vez."
+  ],
+  "Eligible Cat Room actions earn once per action per cat per Macau day, within the daily limit. Rest and guest previews earn nothing. Old Bond XP is not convertible.": [
+    "有效互动每只猫、每个动作、每个澳门日仅奖励一次，受每日上限限制。休息和访客预览不产生奖励，旧 Bond XP 不可转换。",
+    "有效互動每隻貓、每個動作、每個澳門日僅獎勵一次，受每日上限限制。休息和訪客預覽不產生獎勵，舊 Bond XP 不可轉換。",
+    "As ações elegíveis dão uma recompensa por ação, gato e dia de Macau, até ao limite diário. Descansar e as prévias de visitantes não dão recompensas. O Bond XP antigo não é convertível."
+  ],
+  "Café approval and animal welfare review are required. Cancel pending requests for a full Credits refund once. No real request is sent.": [
+    "申请需要猫咖批准及动物福利审核。待批准申请可取消并全额退还一次积分，不会向真实猫咖发送申请。",
+    "申請需要貓咖批准及動物福利審核。待批准申請可取消並全額退還一次積分，不會向真實貓咖發送申請。",
+    "É necessária aprovação do café e avaliação do bem-estar animal. Os pedidos pendentes podem ser cancelados com reembolso integral dos Créditos uma única vez. Não é enviado nenhum pedido real."
   ]
 }
