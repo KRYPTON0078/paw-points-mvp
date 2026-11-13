@@ -34,6 +34,10 @@ export async function refreshLive() {
   } catch { /* keep last known board; the local demo keeps working offline */ }
 }
 
+export function trackView(cat_id: string) {
+  post({ kind: 'events', events: [{ event: 'view_cat', member_id: memberId(), cat_id, page: 'cat_id' }] }).catch(() => {});
+}
+
 // Mirrors a successful local action to the ops sheet. Resolves to an error message, or '' when saved or not mirrored.
 export async function mirror(command: Command, after: DemoState): Promise<string> {
   const member_id = memberId();
