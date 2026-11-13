@@ -15,3 +15,6 @@ No payments, authentication, staff service or actual bookings. Client state can 
 
 ## GitHub
 Local delivery only until publication is authorized. Intended repository: paw-points-mvp. After verifying your account and destination: `gh repo create paw-points-mvp --private --source=. --remote=origin`, then `git push -u origin main`.
+
+## Languages
+The header language selector supports 简体中文, 繁體中文, English, and Português (European Portuguese). The selected language is saved as `paw-points-language` in localStorage and preserved across navigation and reloads. Translations include page content, product names, relationship levels, rewards, activity history, and success/error messages. Brand names, cat names, PP/XP identifiers and currency codes stay unchanged. Translation data lives in `src/lib/translations.json`.

@@ -1,0 +1,742 @@
+{
+  "Home": [
+    "首页",
+    "首頁",
+    "Início"
+  ],
+  "Menu": [
+    "菜单",
+    "菜單",
+    "Menu"
+  ],
+  "Our cats": [
+    "猫咪们",
+    "貓咪們",
+    "Os nossos gatos"
+  ],
+  "Companion": [
+    "我的伙伴",
+    "我的夥伴",
+    "Companheiro"
+  ],
+  "Rewards": [
+    "奖励",
+    "獎賞",
+    "Recompensas"
+  ],
+  "You": [
+    "我的",
+    "我的",
+    "Perfil"
+  ],
+  "Done. A little closer, together.": [
+    "操作成功，关系更近一步。",
+    "操作成功，關係更近一步。",
+    "Feito. Mais próximos, juntos."
+  ],
+  "Getting your café ready…": [
+    "正在准备你的猫咖…",
+    "正在準備你的貓咖…",
+    "A preparar o seu café…"
+  ],
+  "years old": [
+    "岁",
+    "歲",
+    "anos"
+  ],
+  "Meet your next favourite hello": [
+    "认识你的下一位好朋友",
+    "認識你的下一位好朋友",
+    "Conheça o seu próximo amigo"
+  ],
+  "YOUR CONNECTION · LEVEL": [
+    "你们的羁绊 · 等级",
+    "你們的羈絆 · 等級",
+    "A VOSSA LIGAÇÃO · NÍVEL"
+  ],
+  "Highest level reached": [
+    "已达到最高等级",
+    "已達到最高等級",
+    "Nível máximo atingido"
+  ],
+  "Bond XP": [
+    "亲密经验",
+    "親密經驗",
+    "XP de ligação"
+  ],
+  "XP to": [
+    "经验后升至",
+    "經驗後升至",
+    "XP para"
+  ],
+  "● Demo café experience": [
+    "● 猫咖演示体验",
+    "● 貓咖示範體驗",
+    "● Experiência de demonstração"
+  ],
+  "GOOD COFFEE. EVEN BETTER COMPANY.": [
+    "好咖啡，更好的陪伴。",
+    "好咖啡，更好的陪伴。",
+    "BOM CAFÉ. MELHOR COMPANHIA."
+  ],
+  "Your coffee.": [
+    "你的咖啡。",
+    "你的咖啡。",
+    "O seu café."
+  ],
+  "Their company.": [
+    "它的陪伴。",
+    "牠的陪伴。",
+    "A companhia deles."
+  ],
+  "A little closer.": [
+    "让彼此更亲近。",
+    "讓彼此更親近。",
+    "Um pouco mais perto."
+  ],
+  "Meet real cats. Make real connections.": [
+    "认识真实的猫咪，建立温暖的联结。",
+    "認識真實的貓咪，建立溫暖的連結。",
+    "Conheça gatos reais. Crie laços reais."
+  ],
+  "Turn your everyday café ritual into something more.": [
+    "让每天的咖啡时光，多一份牵挂。",
+    "讓每天的咖啡時光，多一份牽掛。",
+    "Dê um novo sentido à sua rotina de café."
+  ],
+  "Meet the cats": [
+    "认识猫咪",
+    "認識貓咪",
+    "Conhecer os gatos"
+  ],
+  "Explore the menu": [
+    "浏览菜单",
+    "瀏覽菜單",
+    "Explorar o menu"
+  ],
+  "Little visits. Lasting bonds.": [
+    "短暂相聚，长久羁绊。",
+    "短暫相聚，長久羈絆。",
+    "Pequenas visitas. Laços duradouros."
+  ],
+  "Mochi relaxing in a sunlit café": [
+    "Mochi 在阳光下的猫咖休息",
+    "Mochi 在陽光下的貓咖休息",
+    "Mochi a descansar num café soalheiro"
+  ],
+  "OUR RESIDENT SUNSHINE": [
+    "店里的阳光小伙伴",
+    "店裡的陽光小夥伴",
+    "O NOSSO RAIO DE SOL"
+  ],
+  "Say hello to Mochi": [
+    "向 Mochi 打个招呼",
+    "向 Mochi 打個招呼",
+    "Diga olá ao Mochi"
+  ],
+  "Your next chapter starts with a hello.": [
+    "从一声招呼，开启新的故事。",
+    "從一聲招呼，開啟新的故事。",
+    "O próximo capítulo começa com um olá."
+  ],
+  "YOUR PAW POINTS": [
+    "你的爪爪积分",
+    "你的爪爪積分",
+    "OS SEUS PAW POINTS"
+  ],
+  "A little thank-you for showing up.": [
+    "谢谢你的每一次到来。",
+    "謝謝你的每一次到來。",
+    "Um pequeno obrigado por aparecer."
+  ],
+  "YOUR COMPANION": [
+    "你的猫咪伙伴",
+    "你的貓咪夥伴",
+    "O SEU COMPANHEIRO"
+  ],
+  "A friend awaits": [
+    "有位朋友在等你",
+    "有位朋友在等你",
+    "Um amigo à sua espera"
+  ],
+  "Find a familiar face to come back to.": [
+    "找到让你想再见的那张小脸。",
+    "找到讓你想再見的那張小臉。",
+    "Encontre um amigo que o faça voltar."
+  ],
+  "MAKE TODAY A LITTLE CLOSER": [
+    "今天，也靠近一点",
+    "今天，也靠近一點",
+    "HOJE, UM POUCO MAIS PERTO"
+  ],
+  "Drop in. Check in.": [
+    "来坐坐，签个到。",
+    "來坐坐，簽個到。",
+    "Visite-nos. Registe a visita."
+  ],
+  "+5 Paw Points · +20 Bond XP": [
+    "+5 爪爪积分 · +20 亲密经验",
+    "+5 爪爪積分 · +20 親密經驗",
+    "+5 Paw Points · +20 XP de ligação"
+  ],
+  "REAL CATS. ONE-OF-A-KIND PERSONALITIES.": [
+    "每只猫咪，都独一无二。",
+    "每隻貓咪，都獨一無二。",
+    "GATOS REAIS. PERSONALIDADES ÚNICAS."
+  ],
+  "Someone worth coming back for.": [
+    "总有一位，值得你再来。",
+    "總有一位，值得你再來。",
+    "Alguém por quem vale a pena voltar."
+  ],
+  "Meet everyone": [
+    "认识所有猫咪",
+    "認識所有貓咪",
+    "Conhecer todos"
+  ],
+  "YOUR NEXT LITTLE RITUAL": [
+    "你的下一个小习惯",
+    "你的下一個小習慣",
+    "O SEU PRÓXIMO RITUAL"
+  ],
+  "A warm cup. A familiar face.": [
+    "一杯暖饮，一张熟悉的小脸。",
+    "一杯暖飲，一張熟悉的小臉。",
+    "Uma chávena quente. Um amigo familiar."
+  ],
+  "Every MOP 1 spent earns 1 Paw Point.": [
+    "每消费 1 澳门元，获得 1 爪爪积分。",
+    "每消費 1 澳門元，獲得 1 爪爪積分。",
+    "Por cada 1 MOP gasto, ganha 1 Paw Point."
+  ],
+  "Find your coffee": [
+    "选一杯咖啡",
+    "選一杯咖啡",
+    "Escolher um café"
+  ],
+  "BREWED WITH CARE": [
+    "用心制作",
+    "用心製作",
+    "PREPARADO COM CARINHO"
+  ],
+  "Your usual, or something new?": [
+    "老样子，还是来点新口味？",
+    "老樣子，還是來點新口味？",
+    "O habitual, ou algo novo?"
+  ],
+  "Made fresh, enjoyed slowly.": [
+    "新鲜制作，慢慢享用。",
+    "新鮮製作，慢慢享用。",
+    "Feito na hora, para saborear devagar."
+  ],
+  "Remove": [
+    "减少",
+    "減少",
+    "Remover"
+  ],
+  "Add": [
+    "添加",
+    "新增",
+    "Adicionar"
+  ],
+  "Your order": [
+    "你的订单",
+    "你的訂單",
+    "O seu pedido"
+  ],
+  "Total MOP": [
+    "合计（澳门元）",
+    "合計（澳門元）",
+    "Total MOP"
+  ],
+  "· Coffee earns PP, never Bond XP.": [
+    "· 消费仅获得积分，不增加亲密经验。",
+    "· 消費僅獲得積分，不增加親密經驗。",
+    "· O café dá PP, mas não XP de ligação."
+  ],
+  "DEMO PAYMENT · Complete order": [
+    "模拟支付 · 完成订单",
+    "模擬付款 · 完成訂單",
+    "PAGAMENTO SIMULADO · Concluir pedido"
+  ],
+  "THE HEART OF OUR CAFÉ": [
+    "猫咖的主角们",
+    "貓咖的主角們",
+    "O CORAÇÃO DO NOSSO CAFÉ"
+  ],
+  "Real cats. Real personalities.": [
+    "真实猫咪，各有个性。",
+    "真實貓咪，各有個性。",
+    "Gatos reais. Personalidades reais."
+  ],
+  "A shared space, a slower pace, and a few friends to get to know. Sample profiles representing café cats.": [
+    "在共享的空间里慢下来，认识几位新朋友。以下为猫咖示例档案。",
+    "在共享的空間裡慢下來，認識幾位新朋友。以下為貓咖示例檔案。",
+    "Um espaço partilhado, um ritmo mais calmo e amigos para conhecer. Perfis de exemplo de gatos de café."
+  ],
+  "PAW & BREW RESIDENT ·": [
+    "猫咖常驻伙伴 ·",
+    "貓咖常駐夥伴 ·",
+    "RESIDENTE PAW & BREW ·"
+  ],
+  "YEARS": [
+    "岁",
+    "歲",
+    "ANOS"
+  ],
+  "Hello, I’m": [
+    "你好，我是",
+    "你好，我是",
+    "Olá, sou"
+  ],
+  "A curious little soul who loves sunny windows and quiet company. Let our friendship grow one real visit at a time.": [
+    "喜欢阳光窗台和安静陪伴的小家伙。每一次到访，都让友谊慢慢成长。",
+    "喜歡陽光窗台和安靜陪伴的小傢伙。每一次到訪，都讓友誼慢慢成長。",
+    "Um pequeno curioso que adora janelas soalheiras e companhia tranquila. A amizade cresce a cada visita."
+  ],
+  "followers · Sample profile": [
+    "位关注者 · 示例档案",
+    "位追蹤者 · 示例檔案",
+    "seguidores · Perfil de exemplo"
+  ],
+  "Unfollow": [
+    "取消关注",
+    "取消追蹤",
+    "Deixar de seguir"
+  ],
+  "Follow": [
+    "关注",
+    "追蹤",
+    "Seguir"
+  ],
+  "Set as primary ♡": [
+    "设为主要伙伴 ♡",
+    "設為主要夥伴 ♡",
+    "Definir como principal ♡"
+  ],
+  "A little time together": [
+    "一起度过一点时光",
+    "一起度過一點時光",
+    "Um pouco de tempo juntos"
+  ],
+  "Simulated in-store staff approval. Always respect the cat’s comfort.": [
+    "模拟店员审核。请始终尊重猫咪的意愿与舒适度。",
+    "模擬店員審核。請始終尊重貓咪的意願與舒適度。",
+    "Aprovação simulada pela equipa. Respeite sempre o conforto do gato."
+  ],
+  "Request an interaction": [
+    "申请互动",
+    "申請互動",
+    "Pedir uma interação"
+  ],
+  "Simulate staff verification · +30 XP": [
+    "模拟店员核验 · +30 经验",
+    "模擬店員核實 · +30 經驗",
+    "Simular validação da equipa · +30 XP"
+  ],
+  "Care from wherever you are": [
+    "随时送上一份关怀",
+    "隨時送上一份關懷",
+    "Carinho, onde quer que esteja"
+  ],
+  "DEMO PAYMENT · Pending staff fulfillment. Care is approved and performed by trained staff. No automatic feeding.": [
+    "模拟支付 · 待店员执行。照护由受训店员审核并实施，不会自动投喂。",
+    "模擬付款 · 待店員執行。照護由受訓店員審核並實施，不會自動餵食。",
+    "PAGAMENTO SIMULADO · A aguardar a equipa. Os cuidados são aprovados e realizados por pessoal qualificado. Sem alimentação automática."
+  ],
+  "Treat support": [
+    "零食关怀",
+    "零食關懷",
+    "Apoio com petiscos"
+  ],
+  "Playtime enrichment": [
+    "玩耍陪伴",
+    "玩耍陪伴",
+    "Brincadeiras"
+  ],
+  "General care": [
+    "日常照护",
+    "日常照護",
+    "Cuidados gerais"
+  ],
+  "This month’s familiar faces": [
+    "本月的熟悉面孔",
+    "本月的熟悉面孔",
+    "Caras conhecidas deste mês"
+  ],
+  "Fictional activity ranking, not a cat’s emotional preferences.": [
+    "虚构的活跃榜单，不代表猫咪的感情偏好。",
+    "虛構的活躍榜單，不代表貓咪的感情偏好。",
+    "Classificação de atividade fictícia; não representa as preferências afetivas do gato."
+  ],
+  "Alex · You": [
+    "Alex · 你",
+    "Alex · 你",
+    "Alex · Você"
+  ],
+  "Little café moments": [
+    "猫咖日常小片段",
+    "貓咖日常小片段",
+    "Pequenos momentos no café"
+  ],
+  "Sample update ·": [
+    "示例动态 ·",
+    "示例動態 ·",
+    "Novidade de exemplo ·"
+  ],
+  "found the sunniest spot by the window today.": [
+    "今天找到了窗边阳光最好的位置。",
+    "今天找到了窗邊陽光最好的位置。",
+    "encontrou hoje o lugar mais soalheiro junto à janela."
+  ],
+  "Explore cat-specific rewards →": [
+    "查看猫咪专属奖励 →",
+    "查看貓咪專屬獎賞 →",
+    "Explorar recompensas deste gato →"
+  ],
+  "LITTLE VISITS. LASTING BONDS.": [
+    "短暂相聚，长久羁绊。",
+    "短暫相聚，長久羈絆。",
+    "PEQUENAS VISITAS. LAÇOS DURADOUROS."
+  ],
+  "Your circle of companions.": [
+    "你的猫咪朋友圈。",
+    "你的貓咪朋友圈。",
+    "O seu círculo de companheiros."
+  ],
+  "Simulated daily check-in": [
+    "模拟每日签到",
+    "模擬每日簽到",
+    "Simular registo diário"
+  ],
+  "Demo accelerator · +100 presentation XP": [
+    "演示加速 · +100 亲密经验",
+    "示範加速 · +100 親密經驗",
+    "Acelerar demonstração · +100 XP"
+  ],
+  "Choose your first companion to begin.": [
+    "选择第一位伙伴，开始你们的故事。",
+    "選擇第一位夥伴，開始你們的故事。",
+    "Escolha o seu primeiro companheiro para começar."
+  ],
+  "LEVEL": [
+    "等级",
+    "等級",
+    "NÍVEL"
+  ],
+  "Profiles, cat updates and observation area": [
+    "猫咪档案、动态与观察区",
+    "貓咪檔案、動態與觀察區",
+    "Perfis, novidades dos gatos e área de observação"
+  ],
+  "Standard interaction booking and relationship badge": [
+    "常规互动预约与羁绊徽章",
+    "一般互動預約與羈絆徽章",
+    "Reserva de interação e distintivo de ligação"
+  ],
+  "VIP companion sessions and priority events": [
+    "VIP 陪伴时段与优先活动资格",
+    "VIP 陪伴時段與優先活動資格",
+    "Sessões VIP e prioridade em eventos"
+  ],
+  "Community privileges and adoption information, subject to independent review": [
+    "社群权益及领养信息，须另行独立审核",
+    "社群權益及領養資訊，須另行獨立審核",
+    "Privilégios da comunidade e informações de adoção, sujeitos a análise independente"
+  ],
+  "Manage your companions": [
+    "管理你的伙伴",
+    "管理你的夥伴",
+    "Gerir os seus companheiros"
+  ],
+  "Make primary": [
+    "设为主要伙伴",
+    "設為主要夥伴",
+    "Tornar principal"
+  ],
+  "GOOD THINGS COME BACK AROUND": [
+    "每份陪伴，都有回响",
+    "每份陪伴，都有迴響",
+    "O CARINHO VOLTA SEMPRE"
+  ],
+  "Small rewards. Happy rituals.": [
+    "小小奖励，快乐日常。",
+    "小小獎賞，快樂日常。",
+    "Pequenas recompensas. Bons hábitos."
+  ],
+  "Relationship for rewards": [
+    "选择奖励关联的伙伴",
+    "選擇獎賞關聯的夥伴",
+    "Companheiro para as recompensas"
+  ],
+  "Choose a followed cat": [
+    "选择已关注的猫咪",
+    "選擇已追蹤的貓咪",
+    "Escolha um gato que segue"
+  ],
+  "Paw Points": [
+    "爪爪积分",
+    "爪爪積分",
+    "Paw Points"
+  ],
+  "Select a companion": [
+    "请选择伙伴",
+    "請選擇夥伴",
+    "Selecione um companheiro"
+  ],
+  "More points needed": [
+    "积分不足",
+    "積分不足",
+    "Pontos insuficientes"
+  ],
+  "Relationship locked": [
+    "亲密等级未解锁",
+    "親密等級未解鎖",
+    "Nível de ligação insuficiente"
+  ],
+  "Redeem reward": [
+    "兑换奖励",
+    "兌換獎賞",
+    "Resgatar recompensa"
+  ],
+  "YOUR CORNER OF THE CAFÉ": [
+    "属于你的猫咖一角",
+    "屬於你的貓咖一角",
+    "O SEU CANTINHO DO CAFÉ"
+  ],
+  "Hi, Alex.": [
+    "你好，Alex。",
+    "你好，Alex。",
+    "Olá, Alex."
+  ],
+  "Available points": [
+    "可用积分",
+    "可用積分",
+    "Pontos disponíveis"
+  ],
+  "Café visits": [
+    "到店次数",
+    "到店次數",
+    "Visitas ao café"
+  ],
+  "Followed cats": [
+    "已关注猫咪",
+    "已追蹤貓咪",
+    "Gatos seguidos"
+  ],
+  "Your voucher wallet": [
+    "你的奖励钱包",
+    "你的獎賞錢包",
+    "A sua carteira de vales"
+  ],
+  "Demo voucher · staff confirmation required": [
+    "演示凭证 · 需店员确认",
+    "示範憑證 · 需店員確認",
+    "Vale de demonstração · Requer confirmação da equipa"
+  ],
+  "Your first little reward is waiting to happen.": [
+    "你的第一份小奖励，正在等你。",
+    "你的第一份小獎賞，正在等你。",
+    "A sua primeira recompensa espera por si."
+  ],
+  "Your story, one visit at a time": [
+    "每次到访，续写你的故事",
+    "每次到訪，續寫你的故事",
+    "A sua história, visita a visita"
+  ],
+  "Start with a coffee or a new companion.": [
+    "从一杯咖啡或一位新伙伴开始。",
+    "從一杯咖啡或一位新夥伴開始。",
+    "Comece com um café ou um novo companheiro."
+  ],
+  "Reset all local demo progress?": [
+    "重置本机的全部演示进度？",
+    "重設本機的全部示範進度？",
+    "Repor todo o progresso local da demonstração?"
+  ],
+  "Reset demo data": [
+    "重置演示数据",
+    "重設示範資料",
+    "Repor dados de demonstração"
+  ],
+  "Real cats. Real connections. More reasons to return.": [
+    "真实猫咪，温暖联结，多一个再来的理由。",
+    "真實貓咪，溫暖連結，多一個再來的理由。",
+    "Gatos reais. Laços reais. Mais razões para voltar."
+  ],
+  "DEMO · No real payments, bookings, feeding or adoption. Paw & Brew Macau is a sample café.": [
+    "演示版 · 无真实支付、预约、投喂或领养。Paw & Brew Macau 为示例猫咖。",
+    "示範版 · 無真實付款、預約、餵食或領養。Paw & Brew Macau 為示例貓咖。",
+    "DEMONSTRAÇÃO · Sem pagamentos, reservas, alimentação ou adoção reais. Paw & Brew Macau é um café fictício."
+  ],
+  "Gentle soul · Sunbeam seeker": [
+    "温柔性格 · 喜欢晒太阳",
+    "溫柔性格 · 喜歡曬太陽",
+    "Meigo · Adora o sol"
+  ],
+  "Quietly curious · A little independent": [
+    "安静好奇 · 有点独立",
+    "安靜好奇 · 有點獨立",
+    "Curiosa e calma · Independente"
+  ],
+  "Playful spirit · Everyone’s friend": [
+    "活泼爱玩 · 大家的朋友",
+    "活潑愛玩 · 大家的朋友",
+    "Brincalhão · Amigo de todos"
+  ],
+  "Cloud Latte": [
+    "云朵拿铁",
+    "雲朵拿鐵",
+    "Latte Nuvem"
+  ],
+  "Garden Matcha": [
+    "花园抹茶",
+    "花園抹茶",
+    "Matcha Jardim"
+  ],
+  "Slow Morning Americano": [
+    "慢晨美式",
+    "慢晨美式",
+    "Americano Manhã Tranquila"
+  ],
+  "Butter Croissant": [
+    "黄油可颂",
+    "牛油可頌",
+    "Croissant de manteiga"
+  ],
+  "First Encounter": [
+    "初次相遇",
+    "初次相遇",
+    "Primeiro encontro"
+  ],
+  "Close Friend": [
+    "亲密朋友",
+    "親密朋友",
+    "Amigo próximo"
+  ],
+  "Best Companion": [
+    "最佳伙伴",
+    "最佳夥伴",
+    "Melhor companheiro"
+  ],
+  "Lifelong Companion": [
+    "终身伙伴",
+    "終身夥伴",
+    "Companheiro para a vida"
+  ],
+  "MOP 5 coffee voucher": [
+    "5 澳门元咖啡券",
+    "5 澳門元咖啡券",
+    "Vale de café de 5 MOP"
+  ],
+  "Selected pastry": [
+    "精选糕点",
+    "精選糕點",
+    "Pastelaria selecionada"
+  ],
+  "10-minute interaction booking": [
+    "10 分钟互动预约",
+    "10 分鐘互動預約",
+    "Reserva de interação de 10 minutos"
+  ],
+  "VIP 15-minute companion session": [
+    "VIP 15 分钟陪伴时段",
+    "VIP 15 分鐘陪伴時段",
+    "Sessão VIP de 15 minutos"
+  ],
+  "Adoption application information · human review": [
+    "领养申请信息 · 人工审核",
+    "領養申請資訊 · 人工審核",
+    "Informações de adoção · Análise humana"
+  ],
+  "Already completed": [
+    "此操作已完成",
+    "此操作已完成",
+    "Esta ação já foi concluída"
+  ],
+  "Already following": [
+    "已经关注了",
+    "已經追蹤了",
+    "Já segue este gato"
+  ],
+  "Follow first": [
+    "请先关注",
+    "請先追蹤",
+    "Siga primeiro"
+  ],
+  "Cart empty": [
+    "购物车为空",
+    "購物車為空",
+    "O carrinho está vazio"
+  ],
+  "Follow a cat first": [
+    "请先关注一只猫咪",
+    "請先追蹤一隻貓咪",
+    "Siga primeiro um gato"
+  ],
+  "Already checked in today": [
+    "今天已经签到了",
+    "今天已經簽到了",
+    "Já registou a visita de hoje"
+  ],
+  "Daily care limit reached": [
+    "已达到每日照护上限",
+    "已達到每日照護上限",
+    "Limite diário de cuidados atingido"
+  ],
+  "Insufficient points or relationship level": [
+    "积分或亲密等级不足",
+    "積分或親密等級不足",
+    "Pontos ou nível de ligação insuficientes"
+  ],
+  "follow": [
+    "关注猫咪",
+    "追蹤貓咪",
+    "Seguir gato"
+  ],
+  "unfollow": [
+    "取消关注",
+    "取消追蹤",
+    "Deixar de seguir"
+  ],
+  "primary": [
+    "设置主要伙伴",
+    "設定主要夥伴",
+    "Definir principal"
+  ],
+  "checkout": [
+    "模拟消费",
+    "模擬消費",
+    "Compra simulada"
+  ],
+  "checkin": [
+    "每日签到",
+    "每日簽到",
+    "Registo diário"
+  ],
+  "interaction": [
+    "互动核验",
+    "互動核實",
+    "Validação de interação"
+  ],
+  "care": [
+    "照护支持",
+    "照護支援",
+    "Apoio aos cuidados"
+  ],
+  "accelerate": [
+    "演示加速",
+    "示範加速",
+    "Aceleração de demonstração"
+  ],
+  "redeem": [
+    "兑换奖励",
+    "兌換獎賞",
+    "Resgate de recompensa"
+  ],
+  "Language": [
+    "语言",
+    "語言",
+    "Idioma"
+  ]
+}
