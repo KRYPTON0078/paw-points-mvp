@@ -19,6 +19,7 @@
     "lucide-react": "*",
     "motion": "*",
     "next": "*",
+    "qrcode": "^1.5.4",
     "react": "*",
     "react-dom": "*",
     "tailwind-merge": "*",
