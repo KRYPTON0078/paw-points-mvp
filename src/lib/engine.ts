@@ -88,11 +88,13 @@ export function act(state: DemoState, command: Command, id: string, now = new Da
     }
     case 'cart':
       if(!products.some(p=>p.id===command.productId))throw Error('Unknown product');
+      if(command.quantity>0&&products.find(p=>p.id===command.productId)!.availability!=='Demo available')throw Error('Product not available');
       if(!Number.isInteger(command.quantity)||command.quantity<0||command.quantity>rules.maxCartQuantity)throw Error('Quantity must be between 0 and 20');
       s.cart[command.productId]=command.quantity;break;
     case 'checkout': {
       const items=products.filter(p=>(s.cart[p.id]??0)>0).map(p=>({productId:p.id,quantity:s.cart[p.id],unitPrice:p.price,name:p.name}));
       if(!items.length)throw Error('Cart empty');
+      if(items.some(i=>products.find(p=>p.id===i.productId)!.availability!=='Demo available'))throw Error('Product not available');
       if(items.some(i=>!Number.isInteger(i.quantity)||i.quantity>rules.maxCartQuantity||i.quantity<1))throw Error('Invalid quantity');
       const amount=items.reduce((sum,item)=>sum+item.unitPrice*item.quantity,0);
       s.orders.unshift({id,items,amount,date,status:'simulated',shippingStatus:'not-applicable'});
