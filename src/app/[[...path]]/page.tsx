@@ -1,3 +1,4 @@
 import PawApp from '../../components/PawApp';
-export function generateStaticParams(){return [{path:[]},...['menu','cats','companion','rewards','profile'].map(p=>({path:[p]})),...['mochi','luna','milo'].map(id=>({path:['cats',id]}))]}
+import { cats } from '../../data/seed';
+export function generateStaticParams(){return [{path:[]},...['cats','cat101','birthday','shop','companion','rewards','profile','menu'].map(p=>({path:[p]})),...cats.map(cat=>({path:['cats',cat.id]}))]}
 export default function Page(){return <PawApp/>}
