@@ -1,0 +1,171 @@
+# Paw Points 2.2｜GrokBot 与团队交接
+
+来源：Codex｜更新：2026-11-13。范围：可演示的消费者网站；未建立真实经营后台或完整 Agent 系统。
+
+
+## Round 4 当前交付（2026-11-14）
+
+本节优先于下方历史记录。分支 `feature/paw-points-round-4`，基于 Round 3 `b817f41`，已 fetch 的 main 为 `89f366e`。仅推功能分支，未合并 main、未发布 Production。验收见 [QA_ROUND4.md](QA_ROUND4.md)。
+
+- 新页面：`/login/`、`/signup/`、`/cat-room/`、`/credits/`。保留全部旧路由和 QR Studio。
+- 身份：没有认证后台，登录/注册都是明确标注的本浏览器 Alex 演示入口，不收集密码或个人资料，也不创建真实账户。访客可浏览和互动预览；账户操作由 UI 登录提示和 engine 双层限制。登录恢复原页面及猫咪查询参数；退出隐藏账户数据但不清空。
+- 数据迁移：沿用 `paw-points-v2` key，persist version 2 → 3；保留旧 PP、Bond XP、投票、订单、预约和账本，迁移后先进入访客模式。重新进入演示即可恢复旧账户。旧 XP 不补发可兑换额。
+- Affinity 是新 Cat Room 互动对应的可兑换额度，不新增第二套等级：合资格互动同时增加等量累计 Bond XP 和可用 Affinity，兑换只减 Affinity，永不扣历史 XP。猫咪卡显示累计赚取量，钱包显示剩余额度；未关注猫的互动也可记录 XP，但不自动关注或发放关注奖励。
+- 可配置 DEMO 参数集中于 `src/lib/round4.ts`：每次 10 Affinity，Pet/Play/Seek/模拟 Feed 每猫每澳门日各一次，全账户每日最多 10 次；Rest 和访客不赚取。1 Affinity = 1 Credit；100 Credits = 申请 1 分钟店员引导体验；单次最多 30 分钟。这些不是正式商业费率。
+- 兑换与申请先展示确认明细，再以稳定命令 ID 执行；纯状态克隆成功后才写回，同 ID 重提拒绝，余额不可为负。新体验状态仅 awaiting-staff，不提供自动批准；待批准可取消并全额退还 Credits 一次，状态阻止重复退款。旧券退款规则未新增。
+- Cat Room：5 猫与其真实对应示例照片、资料、猫咖、XP/累计亲密度；5 个独立动作、3 个原创场景（温馨猫咖/阳光窗边/花园），切换保留猫咪及进度；场景刷新保留。模拟喂食不触发现实操作。相关商品复用现有详情、颜色/价格及模拟购物；图片明确为概念样图。
+- Partner Experience 奖励说明已改为“申请店员引导的体验” / “Apply for a staff-guided experience.”；保留原申请路径和资格要求。
+- 四语：简中、繁中、英文、欧洲葡语；原排行榜、庆祝、地图、商城筛选、生日与历史继续保留。旧 Virtual Pet 仍不产生任何 PP/XP。
+
+边界：本地状态可被用户修改，不是安全认证、共享余额、真实支付或真实店员申请系统。每日限额依赖设备时间，不能视为防作弊后端。参考网站 URL 未提供，对照待完成。真实认证/数据库/服务端账本/员工审批及支付均待后续明确接入。
+
+## Round 3 当前交付（2026-11-13）
+
+本节优先于下方保留的 2.1 历史说明。分支 `feature/paw-points-round-3`，基于 `main@89f366e`；本轮只推功能分支，不自动合并或部署 Production。生产仍是 https://paw-points-mvp.vercel.app 。预览部署结果见本轮交付消息。验收见 [QA_2_2.md](QA_2_2.md)。
+
+### Virtual Pet
+
+- 新增 `/virtual-pet/{catId}/`，覆盖 mochi、luna、milo、coco、nori；从 Cat ID、会员页、陪伴页、猫咖发现进入。
+- `VirtualPet.tsx` 复用同一猫咪照片、ID 和 Bond XP，呈现照片式 2D 互动；不是 3D、真实直播或生成式 AI。
+- `round3.ts` 定义四个场景（cafe / garden / bedroom / night）和四个动作（pet / play / treat / talk）；`public/scenes/` 为原创场景 SVG。声音默认关闭，用户打开后播放轻提示音。
+- `engine.ts` 新增 pet / pet-scene 命令，校验猫、场景及动作；只存 `petScenes` 和最多 60 条 `petHistory`。两字段可选，兼容原 `paw-points-v2` version 2 数据。消息文本不保存，短问候只触发预设反馈。
+- 所有虚拟动作 **0 PP、0 Bond XP、0 votes**。真实照护由员工负责，不暗示领养或所有权。
+
+### 多猫咖地图
+
+`CafeMap.tsx` 使用插画地图，支持拖动、缩放、复位、五个可选 marker 与联动预览。Cafe 延用 mapPosition 示意百分比，新增可选 specialty / featuredCatIds；无真实坐标、导航或地理定位。新增 `/cafes/taipa-atelier/`、`/cafes/coloane-cloud/`，共五家虚构概念店。`cafeCats()` 合并常驻及 featured guest 猫，保持原五只猫的归属与 ID。详情说明客串关系并展示关联猫、生日、CAT 101 和商品入口。
+
+### 粉丝榜、投票、商品
+
+`/leaderboard/fans/` 的贡献分从成功 vote 事件的唯一 ID 派生，每票 1 分；关注、消费、PP、XP 和虚拟互动均不增加贡献。三个化名示例粉丝使用明确标注的虚构种子分，You 来自本浏览器；不是全站共享排行。支持猫取本地历史投票最多的猫，分数相同时按 ID 排序。
+
+`VoteButton` 仅在命令成功后播放短庆祝卡，显示猫、+1、剩余票、排行榜已更新、分享和关闭；保留澳门日界三票限制、静音和 reduced-motion 样式。`public/merch/` 的八种 SVG 分别展示照片、贴纸、帆布袋、海报、数字包、季节礼盒、磁贴和饰品，图片明确为概念示意。保留筛选、详情、购物袋及模拟结算。
+
+### Credits 规则
+
+顶部积分旁问号打开原生 dialog，支持 Escape / 背景关闭，四种语言完整覆盖 `creditsRules`。现有规则不变：首次关注 20 PP 一次、签到 5 PP/日、员工互动 10 PP/猫/日、验证邀请模拟 30 PP 一次；模拟商品、已批准生日和照护消费 1 PP/MOP，预约请求无 PP，照护每天最多三次。兑换需余额及猫的 Bond 等级，每奖励每猫一次。无实现到期机制；清浏览器即丢失，不跨设备同步。不可买 PP、兑现、转让；无真实收款及退款流程。PP、Bond XP、免费投票互相独立。
+
+### 检查与后续
+
+已执行 npm ci、26 项测试、Lint、TypeScript、生产构建（39 静态页面）。浏览器实际检查桌面及 390×844 手机、四种语言、互动刷新保留、积分不变、投票庆祝与三票禁用、粉丝分同步、地图选店缩放拖动复位、积分弹窗、商品筛选详情及模拟结算。截图在 `docs/screenshots/round3-*`。自动化与手工范围、未测项见 QA 文档。
+
+团队先审查功能分支和 Preview；通过后再明确批准合并。仍是本地数据演示，无共享后端、真实交易、预约、直播、照护履约或 AI 对话。
+
+---
+
+## 2.1 历史交接（以下为旧版记录）
+
+## 交付状态
+
+- 仓库：https://github.com/Knighty-hub-hit/paw-points-mvp
+- 功能分支：`feature/paw-points-ux-2-1`，起点 `main@7d67770`。
+- 现有生产地址：https://paw-points-mvp.vercel.app 。2.1 本轮不自动合并、不发布生产。预览和分支推送结果以交付消息为准。
+- 验收、浏览器实测、截图与未测项目：[QA_2_1.md](QA_2_1.md)。
+
+## 产品定位与决定
+
+Paw Points 围绕猫咪个性、故事与粉丝关系组织发现、投票、陪伴、生日体验和 IP 商品。此次将首页改为暖白、鼠尾草绿、桃色的编辑式品牌页面，保留所有 2.0 核心规则。
+
+所有猫、猫咖、社区照片与故事是演示内容。三个概念猫咖没有核实坐标或可访地址，因此地图使用插画坐标，助手不请求位置、不计算虚构距离。未确认合作的品牌仅用明确占位；没有获准直播源，因此展示离线状态，不模拟直播。照片用于示意，人物与经营主体未核实。
+
+2.1 沿用 `paw-points-v2` 存储名和 version 2，避免重置演示历史。原六个商品 ID、价格和业务命令保留，新增磁贴与不可购买的饰品。没有接入付费 AI、支付、预约或直播服务。
+
+## 架构与源码入口
+
+| 文件 | 用途 |
+| --- | --- |
+| `src/app/[[...path]]/page.tsx` | 静态路由清单；新增实体页必须同步 generateStaticParams |
+| `src/components/PawApp.tsx` | 客户端路由展示、四语言、导航、通知、footer、减少动效偏好 |
+| `src/components/BrandHome.tsx` | 编辑式首页、文化、猫咪、社区、合作占位与直播发现 |
+| `src/components/World.tsx` | 猫咖插画地图、列表、筛猫、店铺详情、故事与直播状态 |
+| `src/components/Discovery.tsx` | Cat ID、CAT 101；原关注、签到、护照、照护与投票 |
+| `src/components/Experiences.tsx` | 生日申请、商城、购物袋及模拟结算 |
+| `src/components/Account.tsx` | 会员、积分、关系、订单、预约、券包与账本 |
+| `src/components/PawGuide.tsx` / `src/lib/assistant.ts` | 本地问答、语音能力检测、AssistantAdapter 扩展接口 |
+| `src/data/seed.ts` / `world.ts` / `info.ts` | 实体种子、编辑内容、品牌和政策草案 |
+| `src/lib/catalog.ts` | 商品类别、颜色及组合筛选纯函数 |
+| `src/lib/models.ts` / `config.ts` / `engine.ts` | 数据类型、规则和纯函数命令引擎 |
+| `src/store/usePawStore.ts` | Zustand LocalStorage 持久化适配器 |
+| `src/lib/i18n.ts` / `translations.json` | en 原文 key → 简中／繁中／葡语；新增动态内容需纳入翻译测试 |
+| `src/components/QrEntry.tsx` / `src/lib/qr-entry.ts` | 扫码入口、PNG/SVG、EntryAnalytics 接口与本地记录 |
+| `src/components/brand-world.css` | 2.1 语义色、间距、字体及响应式样式；覆盖基础 globals.css |
+
+Next.js 16 App Router、React、TypeScript、Zustand、Motion、qrcode，`output: export`，静态文件在 `out/`。Node 22.x，npm 10.9.8。无服务器数据库或 API key。安装使用 lockfile：`npm ci`。
+
+## 路由
+
+| 路由 | 功能 |
+| --- | --- |
+| `/` | 品牌首页 |
+| `/cats/`、`/cafes/` | 同一猫咖世界的地图／列表与筛选 |
+| `/cats/{mochi,luna,milo,coco,nori}/` | 五只猫的独立 Cat ID |
+| `/cafes/{paw-macau,garden-house,moon-room}/` | 三家概念猫咖与所属猫咪 |
+| `/cat101/` | 免费投票、榜单与徽章 |
+| `/birthday/` | 套餐、生日保存和申请 |
+| `/shop/`、旧 `/menu/` | IP 商品商城，旧路径兼容；不含饮品点单 |
+| `/profile/`、`/companion/`、`/rewards/` | 会员、关系、积分、券包与记录 |
+| `/stories/`、`/stories/{sunbeam,moonlight,adventure}/` | 虚构故事列表与详情 |
+| `/live/` | 获准外部频道入口；当前全部离线 |
+| `/about/`、`/contact/`、`/privacy/`、`/terms/` | 品牌信息与演示政策草案，无虚构邮箱或提交后台 |
+| `/enter/?cafe=pawbrew`、`/qr-generator/` | 保留猫咖别名、二维码生成与 PNG/SVG 导出 |
+
+## 数据模型与持久化
+
+- `Cafe`：id、名称、地点描述、地址核实说明、图片、插画位置；可选真实 coordinates/mapUrl，streamUrl 当前 null。
+- `Cat`：稳定 id、性格／bio、cafeId、示例粉丝与种子票、CatIdentity。医疗状态可 verified/pending/not-provided，当前样例不代表真实认证。
+- `MerchandiseProduct`：稳定 id、catId、价格、category、colorName、productType、availability、效果图类型、未来库存与分账字段。
+- `DemoState`：用户、独立 PP 账本与逐猫 XP、关注和主猫、投票、购物袋、成交快照、生日申请、照护待履约记录、签到、券包、徽章、幂等命令记录。
+- `paw-points-v2`：Zustand 状态。`paw-points-language`：四语言选择。`paw-qr-events`：最近最多 500 条本地扫码记录。
+- 不同设备、浏览器或域名不共享状态；本地数据可被修改，不能作为真实交易或全球票数依据。
+
+## 业务规则（引擎为准）
+
+- Asia/Macau 日历天每天 3 张免费票；消费不买票，投票不增加 Bond XP。
+- 首次关注一次性 +20 PP；取消再关注不重复发放；可多猫关注、各猫 XP 保留、单一主陪伴猫。
+- 签到每天一次：+5 PP/+20 XP；模拟员工互动每猫每天一次：+10 PP/+30 XP。
+- 照护每天最多 3 笔：按 MOP 发演示 PP、+5 XP，始终待员工履约；连续 3 周同猫到店 +40 XP。
+- Bond 等级阈值 0/100/300/800 XP，与 PP 分开；消费不能购买关系等级。
+- 商品模拟支付每 MOP +1 PP，不加 XP；结算保存成交时名称和单价；数量上限 20，Coming soon 商品在引擎层禁购。
+- 生日套餐 399/699/999 MOP。提交仅为申请，无积分；用户显式模拟员工批准与付款后才发 PP，不能等同真实预约。
+- 兑换校验余额、关系等级、防同猫同款重复；命令 ID 幂等；券和领养信息均为演示，无实际兑换或自动领养。
+
+## GrokBot 八类扩展点（规划，尚未实现）
+
+| 角色 | 可接入位置／建议接口 | 所需控制 |
+| --- | --- | --- |
+| Customer Support | `AssistantAdapter.answer` → 受控知识库问答 API | 用户明确同意后才发送问题；不能执行支付／账户动作 |
+| Content & Marketing | world/info 内容 → CMS 草稿与翻译流程 | 人工审核真实性、版权、四语言后发布 |
+| Cat IP Management | Cat/Cafe/Identity → 核验档案 API | 员工权限与审核记录，禁止自动写成已认证 |
+| Event Operations | BirthdayBooking → 容量／审批 API | 服务端核实日期、名额；人工批准后才确认 |
+| Commerce | MerchandiseProduct/Order → 库存／支付／物流 API | 服务端定价，幂等支付 webhook，隔离 Agent 与资金权限 |
+| Community Growth | Vote/Badge/Relationship → VotingService/会员 API | 身份认证、服务端限票、防刷；不允许改票或售票 |
+| Analytics | `EntryAnalytics.record` → 经同意的事件服务 | 最小采集、匿名化、保留期限，不上传整个本地状态 |
+| Product & Engineering | 类型、测试、静态路由 → PR/CI | 最小仓库权限，代码审核；无直接生产部署权 |
+
+以上为接口建议，不是已存在的线上端点。先用适配器隔离远程 I/O，继续保留纯业务测试；引入真实账户前补授权、服务端验证、迁移和审计。不给自动 Agent 无限制访问支付、客户数据或生产发布权限。
+
+## 运行、审核与发布
+
+```sh
+npm ci
+npm test
+npm run typecheck
+npm run lint
+npm run build
+# 静态预览
+python3 -m http.server 3201 --bind 127.0.0.1 --directory out
+```
+
+Pages 的 main 工作流带 `/paw-points-mvp` basePath；Vercel 根路径不设置 GITHUB_PAGES。QR 默认生产域名为 `https://paw-points-mvp.vercel.app`；Preview 若需专用 QR，构建前显式设置 NEXT_PUBLIC_SITE_URL。新增猫咖入口需经批准上线后再打印。
+
+本轮保留 main 和现有生产。后续先审核功能分支，获准后合并和部署；出现问题可回退先前部署，不删除浏览器状态。更改持久化 schema 时必须设计明确迁移，不能用清空数据代替。
+
+## 已知边界与建议下一步
+
+1. 先验收 2.1 界面及四语言措辞，再批准 PR／合并／生产发布。
+2. 真机 Safari、Android Chrome、微信浏览器扫码与下载；语音授权、拒绝和失败场景仍待测。
+3. 核实真实猫咖、动物信息、地址坐标、素材及合作授权，再替换概念内容；有获准直播源后接入频道。
+4. 需要多人共享数据时再建身份、服务端数据库、限票和后台；Demo 的本地积分不是可用财产。
+5. 真实支付、库存、预约、隐私条款和客服联系方式均未配置。先确认服务主体和运营流程，再做接口。
+
+本机工作区的个人录音、PDF、AGENTS.md 和 qr-downloads 未纳入应用交付。

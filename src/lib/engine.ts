@@ -1,4 +1,5 @@
 import { cats, cafes, products, eventPackages, rewards } from '../data/seed';
+import { roomRules } from './round4';
 import { rules, carePackages, themes } from './config';
 import type { DemoState, VoteAllocation, CompetitionSeason, BirthdayBooking } from './models';
 export const levels = rules.levels;
@@ -9,12 +10,19 @@ export function seasonAt(now = new Date()): CompetitionSeason {
   const day = dayKey(now), [y,m] = day.split('-').map(Number);
   return {id:day.slice(0,7),name:day.slice(0,7),startsAt:`${day.slice(0,7)}-01T00:00:00+08:00`,endsAt:new Date(Date.UTC(y,m,1,-8)).toISOString(),sponsor:null};
 }
-export const initial = (): DemoState => ({user:{id:'alex-demo',name:'Alex',birthday:''},points:0,primary:'',cats:{},pointsLedger:[],bondLedger:[],votes:[],bookings:[],orders:[],careOrders:[],redemptions:[],wallet:[],visits:[],cart:{},done:[],firstFollowAwarded:false,weeklyBonuses:[],badges:[]});
+export const initial = (): DemoState => ({demoSignedIn:false,affinity:0,affinityLedger:[],experienceRequests:[],user:{id:'alex-demo',name:'Alex',birthday:''},points:0,primary:'',cats:{},pointsLedger:[],bondLedger:[],votes:[],bookings:[],orders:[],careOrders:[],redemptions:[],wallet:[],visits:[],cart:{},done:[],firstFollowAwarded:false,weeklyBonuses:[],badges:[]});
 export type State = DemoState;
 export type Command =
+  | {type:'demo-login'|'demo-logout'}
+  | {type:'room-interact';catId:string;action:import('./models').RoomAction}
+  | {type:'convert-affinity';amount:number}
+  | {type:'request-experience';catId:string;minutes:number}
+  | {type:'cancel-experience';requestId:string}
   | {type:'follow'|'unfollow'|'primary'|'vote'|'checkin'|'interaction';catId:string}
   | {type:'care';catId:string;packageId:string}
   | {type:'cart';productId:string;quantity:number}
+  | {type:'pet';catId:string;action:import('./models').PetAction;scene:import('./models').PetScene}
+  | {type:'pet-scene';catId:string;scene:import('./models').PetScene}
   | {type:'checkout'}
   | {type:'birthday';birthday:string}
   | {type:'book';packageId:string;date:string;guests:number;cafeId:string;theme:string}
@@ -37,11 +45,13 @@ export function rankings(s: DemoState, now = new Date(), live?: Record<string, {
     .sort((a,b)=>b.total-a.total||a.catId.localeCompare(b.catId)).map((row,i)=>({...row,rank:i+1}));
 }
 export const localVotingService: VotingService = {remaining:remainingVotes,rankings,cast:(s,catId,id,now)=>act(s,{type:'vote',catId},id,now)};
+export const requiresAccount = (command:Command) => !['demo-login','demo-logout','pet','pet-scene','room-interact'].includes(command.type);
 export function act(state: DemoState, command: Command, id: string, now = new Date()): DemoState {
   if (!id || state.done.includes(id)) throw Error('Already completed');
+  if(requiresAccount(command)&&!state.demoSignedIn)throw Error('Sign in to save progress, earn Credits and make demo requests.');
   const s = structuredClone(state), date = dayKey(now);
   const catId = 'catId' in command ? command.catId : '';
-  if (catId && !cats.some(c=>c.id===catId)) throw Error('Unknown cat');
+  if ('catId' in command && !cats.some(c=>c.id===catId)) throw Error('Unknown cat');
   const relationship = () => {if (!s.cats[catId]?.active) throw Error('Follow a cat first'); return s.cats[catId];};
   const points = (amount:number,label:string,reference=id,simulated=false) => {
     if (!Number.isInteger(amount)||s.points+amount<0) throw Error('Insufficient points');
@@ -53,6 +63,47 @@ export function act(state: DemoState, command: Command, id: string, now = new Da
     s.bondLedger.unshift({id:`${id}-${label}`,catId,amount,label,date});
   };
   switch (command.type) {
+    case 'demo-login': s.demoSignedIn=true;break;
+    case 'demo-logout': s.demoSignedIn=false;break;
+    case 'room-interact': {
+      if(!['pet','play','seek','feed','rest'].includes(command.action))throw Error('Invalid interaction');
+      // Guests preview reactions without any account mutations. Rest never earns progress.
+      if(!s.demoSignedIn||command.action==='rest')break;
+      const earned=(s.affinityLedger??[]).filter(v=>v.kind==='earn'&&v.date===date);
+      if(earned.some(v=>v.catId===catId&&v.action===command.action)||earned.length>=roomRules.dailyMoments)break;
+      s.affinity=(s.affinity??0)+roomRules.affinityPerMoment;
+      s.affinityLedger=[{id,catId,action:command.action,amount:roomRules.affinityPerMoment,date,kind:'earn'},...(s.affinityLedger??[])];
+      s.cats[catId]??={catId,xp:0,active:false,since:date};
+      s.cats[catId].xp+=roomRules.affinityPerMoment;
+      s.bondLedger.unshift({id:id+'-room',catId,amount:roomRules.affinityPerMoment,date,label:'Cat Room affinity'});
+      break;
+    }
+    case 'convert-affinity': {
+      const amount=command.amount,credits=amount*roomRules.creditsPerAffinity;
+      if(!Number.isSafeInteger(amount)||amount<=0||amount>(s.affinity??0)||!Number.isSafeInteger(credits)||!Number.isSafeInteger(s.points+credits))throw Error('Invalid Affinity amount');
+      s.affinity=(s.affinity??0)-amount;
+      s.affinityLedger=[{id,catId:'',amount:-amount,date,kind:'convert'},...(s.affinityLedger??[])];
+      points(credits,'Demo Affinity conversion',id,true);break;
+    }
+    case 'request-experience': {
+      const minutes=command.minutes,cost=minutes*roomRules.creditsPerMinute;
+      if(!Number.isSafeInteger(minutes)||minutes<1||minutes>roomRules.maxMinutes)throw Error('Invalid duration');
+      points(-cost,'Staff-guided experience request',id,true);
+      s.experienceRequests=[{id,catId,cafeId:cats.find(c=>c.id===catId)!.cafeId,minutes,cost,date,status:'awaiting-staff'},...(s.experienceRequests??[])];break;
+    }
+    case 'cancel-experience': {
+      const request=s.experienceRequests?.find(v=>v.id===command.requestId);
+      if(!request||request.status!=='awaiting-staff')throw Error('Already completed');
+      request.status='cancelled-refunded';points(request.cost,'Experience cancellation refund',request.id,true);break;
+    }
+
+    case 'pet-scene':
+      if (!['cafe','garden','bedroom','night'].includes(command.scene)) throw Error('Invalid scene');
+      s.petScenes = {...s.petScenes,[catId]:command.scene};break;
+    case 'pet':
+      if (!['pet','play','treat','talk'].includes(command.action)||!['cafe','garden','bedroom','night'].includes(command.scene)) throw Error('Invalid interaction');
+      s.petHistory = [{id,catId,action:command.action,scene:command.scene,date:now.toISOString()},...(s.petHistory??[])].slice(0,60);
+      break;
     case 'follow':
       if (s.cats[catId]?.active) throw Error('Already following');
       s.cats[catId] = {catId,xp:s.cats[catId]?.xp??0,active:true,since:s.cats[catId]?.since??date};
@@ -89,11 +140,13 @@ export function act(state: DemoState, command: Command, id: string, now = new Da
     }
     case 'cart':
       if(!products.some(p=>p.id===command.productId))throw Error('Unknown product');
+      if(command.quantity>0&&products.find(p=>p.id===command.productId)!.availability!=='Demo available')throw Error('Product not available');
       if(!Number.isInteger(command.quantity)||command.quantity<0||command.quantity>rules.maxCartQuantity)throw Error('Quantity must be between 0 and 20');
       s.cart[command.productId]=command.quantity;break;
     case 'checkout': {
       const items=products.filter(p=>(s.cart[p.id]??0)>0).map(p=>({productId:p.id,quantity:s.cart[p.id],unitPrice:p.price,name:p.name}));
       if(!items.length)throw Error('Cart empty');
+      if(items.some(i=>products.find(p=>p.id===i.productId)!.availability!=='Demo available'))throw Error('Product not available');
       if(items.some(i=>!Number.isInteger(i.quantity)||i.quantity>rules.maxCartQuantity||i.quantity<1))throw Error('Invalid quantity');
       const amount=items.reduce((sum,item)=>sum+item.unitPrice*item.quantity,0);
       s.orders.unshift({id,items,amount,date,status:'simulated',shippingStatus:'not-applicable'});
